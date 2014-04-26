@@ -250,6 +250,11 @@ function onFrame(event) {
         if(completion1 <= 0)
         {
     completion1 = 1;
+    // Create the event
+var event1 = new CustomEvent("lectureTooFast", { "detail": "The lecture is too fast" });
+
+// Dispatch/Trigger/Fire the event
+document.dispatchEvent(event1);
         }
 }
 
@@ -284,6 +289,11 @@ function onFrame(event) {
         if(completion2 <= 0)
         {
     completion2 = 1;
+        // Create the event
+var event2 = new CustomEvent("lectureTooSlow", { "detail": "The lecture is too slow" });
+
+// Dispatch/Trigger/Fire the event
+document.dispatchEvent(event2);
         }
 }
 
@@ -318,6 +328,11 @@ function onFrame(event) {
         if(completion3 <= 0)
         {
     completion3 = 1;
+        // Create the event
+var event3 = new CustomEvent("goBackSlide", { "detail": "Go back one slide" });
+
+// Dispatch/Trigger/Fire the event
+document.dispatchEvent(event3);
         }
 }
 
@@ -352,6 +367,11 @@ function onFrame(event) {
         if(completion4 <= 0)
         {
     completion4 = 1;
+        // Create the event
+var event4 = new CustomEvent("dontUnderstand", { "detail": "This is confusing" });
+
+// Dispatch/Trigger/Fire the event
+document.dispatchEvent(event4);
         }
 }
 
