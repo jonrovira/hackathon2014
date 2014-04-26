@@ -1,8 +1,8 @@
 //UPPER LEFT CIRCLE
-var outerCircle1 = new Path.Circle(new Point(45, 45), 45);
-outerCircle1.fillColor = 'black';
+var outerCircle1 = new Path.Circle(new Point(45, 45), 42);
+outerCircle1.fillColor = '#193441';
 var innerCircle1 = new Path.Circle(new Point(45, 45), 40);
-innerCircle1.fillColor = 'white';
+innerCircle1.fillColor = '#3e606f';
 
 //goes fom 0 to 1, represents completion % of the circle
 var completion1 = 0.0;
@@ -26,13 +26,13 @@ var path1 = new Path.Arc({
     from: [45 - xval1, yval1],
     through: [45, 90],
     to: [45 + xval1, yval1],
-    strokeColor: 'red'
+    strokeColor: 'white'
 });
 
 path1.opacity = 0.5;
 //closes off the semicircle
 path1.closed = true;
-path1.fillColor = 'red';
+path1.fillColor = 'white';
 
 var hitBox1 = new Path.Circle(new Point(45, 45), 40);
 hitBox1.fillColor = 'white';
@@ -40,14 +40,17 @@ hitBox1.opacity = 0;
 
 //click on the white circle
 hitBox1.onMouseDown = function(event) {
-    completion1 += 0.1;
+    if(completion1 <= 0)
+    {
+    completion1 = 1;
+    }
 }
 
 //UPPER RIGHT CIRCLE
-var outerCircle2 = new Path.Circle(new Point(160, 45), 45);
-outerCircle2.fillColor = 'black';
+var outerCircle2 = new Path.Circle(new Point(160, 45), 42);
+outerCircle2.fillColor = '#193441';
 var innerCircle2 = new Path.Circle(new Point(160, 45), 40);
-innerCircle2.fillColor = 'white';
+innerCircle2.fillColor = '#3e606f';
 
 //goes fom 0 to 1, represents completion % of the circle
 var completion2 = 0.0;
@@ -71,13 +74,13 @@ var path2 = new Path.Arc({
     from: [160 - xval2, yval2],
     through: [160, 85],
     to: [160 + xval2, yval2],
-    strokeColor: 'red'
+    strokeColor: 'white'
 });
 
 path2.opacity = 0.5;
 //closes off the semicircle
 path2.closed = true;
-path2.fillColor = 'red';
+path2.fillColor = 'white';
 
 var hitBox2 = new Path.Circle(new Point(160, 45), 45);
 hitBox2.fillColor = 'white';
@@ -85,14 +88,17 @@ hitBox2.opacity = 0;
 
 //click on the white circle
 hitBox2.onMouseDown = function(event) {
-    completion2 += 0.1;
+    if(completion2 <= 0)
+    {
+    completion2 + 1;
+    }
 }
 
 //LOWER LEFT CIRCLE
-var outerCircle3 = new Path.Circle(new Point(45, 160), 45);
-outerCircle3.fillColor = 'black';
+var outerCircle3 = new Path.Circle(new Point(45, 160), 42);
+outerCircle3.fillColor = '#193441';
 var innerCircle3 = new Path.Circle(new Point(45, 160), 40);
-innerCircle3.fillColor = 'white';
+innerCircle3.fillColor = '#3e606f';
 
 //goes fom 0 to 1, represents completion % of the circle
 var completion3 = 0.0;
@@ -116,13 +122,13 @@ var path3 = new Path.Arc({
     from: [45 - xval3, yval3],
     through: [45, 200],
     to: [45 + xval3, yval3],
-    strokeColor: 'red'
+    strokeColor: 'white'
 });
 
 path3.opacity = 0.5;
 //closes off the semicircle
 path3.closed = true;
-path3.fillColor = 'red';
+path3.fillColor = 'white';
 
 var hitBox3 = new Path.Circle(new Point(45, 160), 40);
 hitBox3.fillColor = 'white';
@@ -130,14 +136,17 @@ hitBox3.opacity = 0;
 
 //click on the white circle
 hitBox3.onMouseDown = function(event) {
-    completion3 += 0.1;
+    if(completion3 <= 0)
+    {
+    completion3 = 1;
+    }
 }
 
 //LOWER RIGHT CIRCLE
-var outerCircle4 = new Path.Circle(new Point(160, 160), 45);
-outerCircle4.fillColor = 'black';
+var outerCircle4 = new Path.Circle(new Point(160, 160), 42);
+outerCircle4.fillColor = '#193441';
 var innerCircle4 = new Path.Circle(new Point(160, 160), 40);
-innerCircle4.fillColor = 'white';
+innerCircle4.fillColor = '#3e606f';
 
 //goes fom 0 to 1, represents completion % of the circle
 var completion4 = 0.0;
@@ -161,13 +170,13 @@ var path4 = new Path.Arc({
     from: [160 - xval4, yval4],
     through: [160, 200],
     to: [160 + xval4, yval4],
-    strokeColor: 'red'
+    strokeColor: 'white'
 });
 
 path4.opacity = 0.5;
 //closes off the semicircle
 path4.closed = true;
-path4.fillColor = 'red';
+path4.fillColor = 'white';
 
 var hitBox4 = new Path.Circle(new Point(160, 160), 45);
 hitBox4.fillColor = 'white';
@@ -175,30 +184,33 @@ hitBox4.opacity = 0;
 
 //click on the white circle
 hitBox4.onMouseDown = function(event) {
-    completion4 += 0.1;
+    if(completion4 <= 0)
+    {
+    completion4 = 1;
+    }
 }
 
 //ALL TEXT
 var faster = new PointText(new Point(45, 40));
-faster.fillColor = 'black';
+faster.fillColor = '#eee';
 faster.justification = 'center';
 faster.fontSize = 14;
 faster.content = 'Go\nFaster';
 
 var slower = new PointText(new Point(160, 40));
-slower.fillColor = 'black';
+slower.fillColor = '#eee';
 slower.justification = 'center';
 slower.fontSize = 14;
 slower.content = 'Go\nSlower';
 
 var understand = new PointText(new Point(45, 155));
-understand.fillColor = 'black';
+understand.fillColor = '#eee';
 understand.justification = 'center';
 understand.fontSize = 14;
 understand.content = 'I Don\'t\nUnderstand';
 
 var example = new PointText(new Point(160, 155));
-example.fillColor = 'black';
+example.fillColor = '#eee';
 example.justification = 'center';
 example.fontSize = 14;
 example.content = 'Give An\nExample';
@@ -225,16 +237,19 @@ function onFrame(event) {
     from: [45 - xval1, yval1],
     through: [45, 85],
     to: [45 + xval1, yval1],
-    strokeColor: 'red'
+    strokeColor: 'white'
 });
     path1.opacity = 0.5;
     path1.closed = true;
-    path1.fillColor = 'red';
+    path1.fillColor = 'white';
     var hitBox1 = new Path.Circle(new Point(45, 45), 40);
     hitBox1.fillColor = 'white';
     hitBox1.opacity = 0;
     hitBox1.onMouseDown = function(event) {
-    completion1 += 0.1;
+        if(completion1 <= 0)
+        {
+    completion1 = 1;
+        }
 }
 
 //UPPER RIGHT ACTIONS
@@ -256,16 +271,19 @@ function onFrame(event) {
     from: [160 - xval2, yval2],
     through: [160, 85],
     to: [160 + xval2, yval2],
-    strokeColor: 'red'
+    strokeColor: 'white'
 });
     path2.opacity = 0.5;
     path2.closed = true;
-    path2.fillColor = 'red';
+    path2.fillColor = 'white';
     var hitBox2 = new Path.Circle(new Point(160, 45), 40);
     hitBox2.fillColor = 'white';
     hitBox2.opacity = 0;
     hitBox2.onMouseDown = function(event) {
-    completion2 += 0.1;
+        if(completion2 <= 0)
+        {
+    completion2 = 1;
+        }
 }
 
 //LOWER LEFT ACTIONS
@@ -287,16 +305,19 @@ function onFrame(event) {
     from: [45 - xval3, yval3],
     through: [45, 200],
     to: [45 + xval3, yval3],
-    strokeColor: 'red'
+    strokeColor: 'white'
 });
     path3.opacity = 0.5;
     path3.closed = true;
-    path3.fillColor = 'red';
+    path3.fillColor = 'white';
     var hitBox3 = new Path.Circle(new Point(45, 200), 40);
     hitBox3.fillColor = 'white';
     hitBox3.opacity = 0;
     hitBox3.onMouseDown = function(event) {
-    completion3 += 0.1;
+        if(completion3 <= 0)
+        {
+    completion3 = 1;
+        }
 }
 
 //LOWER RIGHT ACTIONS
@@ -318,16 +339,19 @@ function onFrame(event) {
     from: [160 - xval4, yval4],
     through: [160, 200],
     to: [160 + xval4, yval4],
-    strokeColor: 'red'
+    strokeColor: 'white'
 });
     path4.opacity = 0.5;
     path4.closed = true;
-    path4.fillColor = 'red';
+    path4.fillColor = 'white';
     var hitBox4 = new Path.Circle(new Point(160, 160), 40);
     hitBox4.fillColor = 'white';
     hitBox4.opacity = 0;
     hitBox4.onMouseDown = function(event) {
-    completion4 += 0.1;
+        if(completion4 <= 0)
+        {
+    completion4 = 1;
+        }
 }
 
 
