@@ -20,7 +20,7 @@ $(document).ready(function() {
 	if(title == "Log in") {
 		$back.css("opacity", "0.2");
 		$back.attr("href", "");
-		$heading.html(title);
+		$('#header ul li a img').css('opacity', '0');
 	}
 	else if(title == "Choose your class") {
 		$back.attr("href", "/sandbox/login.php");

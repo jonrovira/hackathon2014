@@ -39,25 +39,11 @@
 		width: 130px;
 		height: 565px;
 	}
-	#desktop-wrapper #presets #canvas2 li div {
-		margin-bottom: 15px;
-		border-radius: 50%;
-		width: 130px;
-		height: 130px;
-		text-align: center;
-		background-color: #FCFFF5;
-	}
-	#desktop-wrapper #presets #canvas2 li div p {
-		margin-top: 0;
-		line-height: 125px;
-		color: #193441;
-	}
 	#desktop-wrapper #ask {
 		float: right;
 		width: calc(100% - 410px);
 		margin-top: 50px;
 		margin-right: 40px;
-		border: 1px solid #777;
 	}
 	#desktop-wrapper #ask #screen {
 		padding: 10px;

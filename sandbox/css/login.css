@@ -1,7 +1,13 @@
 #branding {
 	text-align: center;
 }
+#branding img {
+	margin-left: 40px;
+	max-width: 150px;
+}
 #branding h1 {
+	margin-top: 0;
+	margin-bottom: 20px;
 	font-family: Nevis;
 	font-size: 70px;
 	color: #fcfff5;
@@ -37,8 +43,14 @@
 
 
 @media(min-width: 1024px) {
+	#branding img {
+		margin-top: 80px;
+		margin-bottom: -20px;
+		margin-left: 0;
+		max-width: 250px;
+	}
 	#branding h1 {
-		padding-top: 40px;
+		margin-top: 0;
 		margin-bottom: 30px;
 		font-size: 120px;
 	}

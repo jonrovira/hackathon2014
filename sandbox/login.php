@@ -13,6 +13,7 @@
 		<?php include 'header.html'; ?>
 
 		<div id="branding">
+			<img src="graphics/Census-Logo.png">
 			<h1>Census</h1>
 		</div>
 		<div id="credentials">
