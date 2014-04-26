@@ -16,6 +16,10 @@
 	background-color: #037F67;
 	font-weight: normal;
 	color: #eee;
+	cursor: pointer;
+}
+#wrapper ul li:hover {
+	opacity: 0.5;
 }
 #wrapper ul li h4, #wrapper ul li h6 {
 	padding-left: 5px;

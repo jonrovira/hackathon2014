@@ -15,19 +15,19 @@
 		<div id="wrapper">
 			<ul>
 				<li>
-					<h4>ECON 310-1</h4>
+					<h4>ECON-310-1</h4>
 					<h6>E. Schulz</h6>
 				</li>
 				<li>
-					<h4>STATS 210-0</h4>
+					<h4>STATS-210-0</h4>
 					<h6>I. Savage</h6>
 				</li>
 				<li>
-					<h4>PSYCH 110-0</h4>
+					<h4>PSYCH-110-0</h4>
 					<h6>E. Finkel</h6>
 				</li>
 				<li>
-					<h4>EECS 348</h4>
+					<h4>EECS-348</h4>
 					<h6>D. Downey </h6>
 				</li>
 			</ul>

@@ -12,8 +12,12 @@ $(document).ready(function() {
 	else if(title == "Choose your course") {
 		$back.attr("href", "/sandbox/login.php");
 		$heading.html(title);
+		$('#wrapper ul li').click(function() {
+			window.location.href = "/sandbox/hub.php";
+		});
 	}
 	else if(title == "Feedback") {
+		$back.attr("href", "/sandbox/courses.php");
 		$heading.html(title);
 	}
 	else if(title == "Ask a question") {
