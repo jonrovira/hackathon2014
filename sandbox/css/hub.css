@@ -3,8 +3,8 @@
 	text-align: center;
 }
 #mobile-wrapper #presets #canvas {
-	width: 222px;
-	height: 222px;
+	width: 222px !important;
+	height: 222px !important;
 }
 #mobile-wrapper #ask {
 	cursor: pointer;
@@ -32,29 +32,76 @@
 		display: block;
 	}
 	#desktop-wrapper #presets {
-		padding-top: 30px;
+		float:left;
+		padding-top: 50px;
 	}
 	#desktop-wrapper #presets #canvas2 {
-		list-style-type: none;
+		width: 130px;
+		height: 565px;
 	}
 	#desktop-wrapper #presets #canvas2 li div {
+		margin-bottom: 15px;
 		border-radius: 50%;
-		width: 100px;
-		height: 100px;
-		vertical-align: middle;
-		background-color: white;
+		width: 130px;
+		height: 130px;
+		text-align: center;
+		background-color: #FCFFF5;
+	}
+	#desktop-wrapper #presets #canvas2 li div p {
+		margin-top: 0;
+		line-height: 125px;
+		color: #193441;
 	}
 	#desktop-wrapper #ask {
-		cursor: pointer;
+		float: right;
+		width: calc(100% - 410px);
+		margin-top: 50px;
+		margin-right: 40px;
+		border: 1px solid #777;
 	}
-	#desktop-wrapper #ask h2 {
-		width: 180px;
-		padding: 8px 20px;
-		margin-right: auto;
-		margin-left: auto;
-		border: 1px solid #D1DBBD;
+	#desktop-wrapper #ask #screen {
+		padding: 10px;
 		border-radius: 3px;
+	}
+	#desktop-wrapper #ask #screen h3 {
+		color: #FCFFF5;
+	}
+	#desktop-wrapper #ask #screen #typefield {
+		float: right;
+		width: 100%;
+		margin-top: 20px;
+	}
+	#desktop-wrapper #ask #screen #typefield #field {
+		width: calc(100% - 10px);
+		height: 48px;
+		padding-left: 7px;
+		font-size: 16px;
+		line-height: 24px;
+		background-color: #fcfff5;
+		border: 1px solid #bbb;
+		border-radius: 3px;
+	}
+	#desktop-wrapper #ask #screen #typefield #send {
+		font-size: 16px;
+		line-height: 22px;
+		background-color: #91AA9D;
+		border: 1px solid #91AA9D;
+		border-radius: 3px;
+		color: #fcfff5;
+	}
+	#desktop-wrapper #ask #screen #messages {
+		height: 490px;
+	}
+	#desktop-wrapper #ask #screen #messages p {
+		float: right;
+		padding: 5px;
+		margin-bottom: 17px;
 		background-color: #D1DBBD;
-		color: #3E606F;
+		border: 1px solid #D1DBBD;
+		border-radius: 5px;
+		color: #193441;
+		line-height: 16px;
+		font-size: 14px;
+		clear: right;
 	}
 }
