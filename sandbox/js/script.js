@@ -1,5 +1,16 @@
 $(document).ready(function() {
 
+	$(window).resize(function() {
+		console.log('resize called');
+		var width = $(window).width();
+		if(width >= 1024) {
+			$('#header ul li a i').removeClass('fa-2x').addClass('fa-4x');
+		}
+		else {
+			$('#header ul li a i').removeClass('fa-4x').addClass('fa-2x');
+		}
+	}).resize();
+
 	var title = $('title').text();
 	var $back = $('#header ul li:nth-child(1) a');
 	var $heading = $('#header ul li:nth-child(2) p');
@@ -27,20 +38,5 @@ $(document).ready(function() {
 		$back.attr("href", "/sandbox/hub.php");
 		$heading.html(title);
 	}
-	//Ryan's stupid code w/ divs
-	var cvsloc = myCanvas.getBoundingClientRect();
-        var div1 = document.createElement('DIV');
-            div1.style.position = 'absolute';
-            div1.style.top   = cvsloc.top + 51 + 'px';
-            div1.style.left  = cvsloc.left + 51 + 'px';
-            div1.style.width = '96px';
-            div1.style.height = '96px';
-            div1.style.borderRadius = '48px';
-            div1.style.cursor = 'pointer';
-            div1.setAttribute("id", "#lectureTooFast");
-            div1.onclick = function (e)
-            {
-                alert('The green circle has been clicked!');
-            }
-        document.body.appendChild(div1);
+	
 });

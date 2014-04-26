@@ -14,7 +14,7 @@
 
 		<div id="wrapper">
 			<div id="presets">
-				<canvas id="myCanvas"></canvas>
+				<canvas id="canvas"></canvas>
 			</div>
 			<div id="ask">
 				<h2>Ask a question</h2>
@@ -23,7 +23,7 @@
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 		<script type="text/javascript" src="packages/bower/paper/dist/paper-full.js"></script>
-		<script type="text/paperscript" src="js/buttoncode.js" canvas="myCanvas"></script>
+		<script type="text/paperscript" src="js/buttoncode.js" canvas="canvas"></script>
 		<script src="js/script.js"></script>
 	</body>
 

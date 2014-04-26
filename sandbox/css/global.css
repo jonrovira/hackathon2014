@@ -45,11 +45,17 @@ html, body {
 }
 
 
-@media(min-width: 767px) {
+@media(min-width: 1024px) {
 	#header ul li:nth-child(1) {
-		margin-left: 20px;
+		margin-left: 25px;
 	}
 	#header ul li:nth-child(3) {
-		margin-right: 20px;
+		margin-right: 25px;
+	}
+	#header ul li p {
+		font-size: 30px;
+	}
+	#header ul li a img {
+		max-width: 60px;
 	}
 }

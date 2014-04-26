@@ -34,12 +34,15 @@
 }
 
 
-@media(min-width: 767px) {
+@media(min-width: 1024px) {
 	#wrapper ul {
-		width: 250px;
+		width: 400px;
 		padding-top: 220px;
 	}
-	#wrapper ul li {
-
+	#wrapper ul li h4 {
+		padding-top: 15px;
+	}
+	#wrapper ul li h6 {
+		
 	}
 }

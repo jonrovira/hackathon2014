@@ -2,9 +2,9 @@
 	padding-top: 30px;
 	text-align: center;
 }
-#wrapper #presets #myCanvas {
-	width: 205px;
-	height: 205px;
+#wrapper #presets #canvas {
+	width: 222px;
+	height: 222px;
 }
 #wrapper #ask {
 	cursor: pointer;
@@ -18,11 +18,4 @@
 	border-radius: 3px;
 	background-color: #D1DBBD;
 	color: #3E606F;
-}
-
-
-@media(min-width: 767px) {
-	#wrapper #presets {
-		padding-top: 220px;
-	}
 }

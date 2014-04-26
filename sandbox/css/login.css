@@ -37,9 +37,14 @@
 
 
 @media(min-width: 1024px) {
+	#branding h1 {
+		padding-top: 40px;
+		margin-bottom: 30px;
+		font-size: 120px;
+	}
 	#credentials {
 		width: 280px;
-		padding-top: 300px;
+		padding-top: 0;
 	}
 	#credentials input {
 		width: 276px;
