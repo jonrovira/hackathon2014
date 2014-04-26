@@ -11,6 +11,8 @@ $(document).ready(function() {
 		}
 	}).resize();
 
+
+
 	var title = $('title').text();
 	var $back = $('#header ul li:nth-child(1) a');
 	var $heading = $('#header ul li:nth-child(2) p');
@@ -30,7 +32,7 @@ $(document).ready(function() {
 	else if(title == "Feedback") {
 		$back.attr("href", "/sandbox/courses.php");
 		$heading.html(title);
-		$('#wrapper #ask').click(function() {
+		$('#mobile-wrapper #ask').click(function() {
 			window.location.href = "/sandbox/ask.php";
 		});
 	}
