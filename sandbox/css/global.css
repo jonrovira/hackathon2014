@@ -1,5 +1,12 @@
+@font-face {
+	font-family: Nevis;
+	src: "fonts/nevis.ttf";
+}
+
+
 html, body {
 	font-family: Helvetica, Arial;
+	background-color: #193441;
 }
 
 
@@ -11,16 +18,13 @@ html, body {
 	vertical-align: middle;
 	list-style-type: none;
 	text-align: center;
+	color: #fcfff5;
 }
 #header ul li {
 	display: inline-block;
 }
 #header ul li:nth-child(1) {
 	float: left;
-}
-#header ul li:nth-child(2) {
-	margin-right: auto;
-	margin-left: auto;
 }
 #header ul li:nth-child(3) {
 	float: right;
@@ -29,10 +33,23 @@ html, body {
 #header ul li a:visited { color: black;}
 #header ul li a:hover {color: black;}
 #header ul li a:active {color: black;}
+#header ul li i {
+	color: #fcfff5;
+}
 #header ul li p {
 	margin-top: 8px;
 	margin-bottom: 0;
 }
-#header hr {
-	border: 1px solid #eee;
+#header ul li a img {
+	max-width: 32px;
+}
+
+
+@media(min-width: 767px) {
+	#header ul li:nth-child(1) {
+		margin-left: 20px;
+	}
+	#header ul li:nth-child(3) {
+		margin-right: 20px;
+	}
 }

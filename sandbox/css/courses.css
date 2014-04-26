@@ -15,7 +15,6 @@
 	border-radius: 3px;
 	text-align: left;
 	background-color: #037F67;
-	font-weight: normal;
 	color: #eee;
 	cursor: pointer;
 }
@@ -32,4 +31,15 @@
 #wrapper ul li h6 {
 	margin-top: 4px;
 	margin-bottom: 10px;
+}
+
+
+@media(min-width: 767px) {
+	#wrapper ul {
+		width: 250px;
+		padding-top: 220px;
+	}
+	#wrapper ul li {
+
+	}
 }

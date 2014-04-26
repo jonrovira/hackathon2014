@@ -19,3 +19,10 @@
 	background-color: #037F67;
 	color: #ffffff;
 }
+
+
+@media(min-width: 767px) {
+	#wrapper #presets {
+		padding-top: 220px;
+	}
+}

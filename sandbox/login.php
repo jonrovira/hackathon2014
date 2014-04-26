@@ -12,6 +12,9 @@
 	<body>
 		<?php include 'header.html'; ?>
 
+		<div id="branding">
+			<h1>Census</h1>
+		</div>
 		<div id="credentials">
 			<input type="text" id="netid" placeholder="Net ID">
 			<input type="password" id="netidpass" placeholder="Password">
