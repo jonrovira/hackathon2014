@@ -1,3 +1,11 @@
+#wrapper #presets {
+	padding-top: 30px;
+	text-align: center;
+}
+#wrapper #presets #myCanvas {
+	width: 205px;
+	height: 205px;
+}
 #wrapper #ask {
 	cursor: pointer;
 }
@@ -6,5 +14,8 @@
 	padding: 8px 20px;
 	margin-right: auto;
 	margin-left: auto;
-	border: 1px solid #ccc;
+	border: 1px solid #037F67;
+	border-radius: 3px;
+	background-color: #037F67;
+	color: #ffffff;
 }

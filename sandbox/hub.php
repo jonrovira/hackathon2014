@@ -14,10 +14,10 @@
 
 		<div id="wrapper">
 			<div id="presets">
-				<canvas id="myCanvas" resize></canvas>
+				<canvas id="myCanvas"></canvas>
 			</div>
 			<div id="ask">
-				<h2>Ask a question.</h2>
+				<h2>Ask a question</h2>
 			</div>
 		</div>
 
