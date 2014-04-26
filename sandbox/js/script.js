@@ -27,5 +27,20 @@ $(document).ready(function() {
 		$back.attr("href", "/sandbox/hub.php");
 		$heading.html(title);
 	}
-
+	//Ryan's stupid code w/ divs
+	var cvsloc = myCanvas.getBoundingClientRect();
+        var div1 = document.createElement('DIV');
+            div1.style.position = 'absolute';
+            div1.style.top   = cvsloc.top + 51 + 'px';
+            div1.style.left  = cvsloc.left + 51 + 'px';
+            div1.style.width = '96px';
+            div1.style.height = '96px';
+            div1.style.borderRadius = '48px';
+            div1.style.cursor = 'pointer';
+            div1.setAttribute("id", "#lectureTooFast");
+            div1.onclick = function (e)
+            {
+                alert('The green circle has been clicked!');
+            }
+        document.body.appendChild(div1);
 });
