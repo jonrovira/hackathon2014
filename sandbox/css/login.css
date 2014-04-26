@@ -2,6 +2,7 @@ html, body {
 	font-family: Helvetica, Arial;
 }
 
+
 #header ul {
 	padding: 0;
 	margin: 0;
@@ -10,21 +11,24 @@ html, body {
 }
 #header p{
 	margin: 0;
-	margin-top: 7px;
+	margin-top: 8px;
 	display: inline-block;
 }
-#header i {
+#header ul i {
 	float: left;
 }
-#header p:nth-child(2) {
-	margin-left: 105px;
-}
-#header p:nth-child(3) {
+#header ul p {
 	float: right;
+}
+#header > p {
+	position: absolute;
+	left: 50%;
+	top: 8px;
 }
 #header hr {
 	border: 1px solid #eee;
 }
+
 
 #credentials {
 	width: 160px;
@@ -32,10 +36,13 @@ html, body {
 	margin-right: auto;
 	margin-left: auto;
 }
-
 #credentials input {
 	width: 160px;
 	border: 1px solid #aaa;
 	font-size: 14px;
 	color: #777;
+}
+#credentials input:nth-child(3) {
+	color: #ffffff;
+	background-color: #024F40;
 }
