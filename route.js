@@ -67,7 +67,16 @@ Router.map(function() {
       yieldTemplates: {
         'studentLectureSidebar': {to: 'sidebar'}
       },
-
+      action: function() {
+        var currentLectureId = parseInt(this.params.index);
+        var currentLecture = Lectures.findOne({index: currentLectureId});
+        if (!currentLecture) {
+          this.redirect('/');
+        }
+        else {
+          this.render();
+        }
+      },
       waitOn: function() {
         var currentLectureId = parseInt(this.params.index);
         return Meteor.subscribe('messages', currentLectureId);
@@ -85,6 +94,9 @@ Router.map(function() {
 
     });
 
+    this.route('notFound', {
+      path: '*'
+    });
 
   });
 }

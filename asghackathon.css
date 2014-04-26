@@ -1,6 +1,6 @@
 /* CSS declarations go here */
 body {
-  font-family: "Arial";
+  font-family: "Helvetica";
   font-size: 14px/21px;
   text-decoration: none;
 }
@@ -58,10 +58,14 @@ li {
 
 .sidebar {
   height: 100%;
-  float: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: -15px;
   background-color: #193441;
-  padding-left: 0px;
+  padding-left: 15px;
 }
+
 
 .mainContent {
   height: 100%;
