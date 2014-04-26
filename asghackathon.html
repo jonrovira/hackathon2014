@@ -3,8 +3,8 @@
 </head>
 
 <body>
-  {{> createLecture}}
 
+</body>
 <template name="createLecture">
   <h1>Create a Lecture</h1>
   <label for="lectureName">Name:</label> <input type="field" id="lectureName">
@@ -21,11 +21,20 @@
 </template>
 
 <template name="lectureDetail">
-  <h1>{{name}}</h1>
+  <h1>{{lecture.name}}</h1>
   <ul>
     {{#each messages}}
     <li>{{content}}</li>
 
     {{/each}}
   </ul>
+
+  <h3>Ask a question</h3>
+  <input type="button" id="lectureTooFast" value="Please slow down a bit!">
+  <input type="button" id="lectureTooSlow" value="You can speed up a bit">
+  <input type="button" id="goBackSlide" value="Can you go back a slide?">
+  <input type="button" id="doNotUnderstandContent" value="I don't understand this.">
+  <input type="text" id="feedbackContent">
+  <input type="button" id="submitNewFeedback" value="Submit">
+  <a href="{{ pathFor 'listLectures' }}">Back to lectures</a>
 </template>

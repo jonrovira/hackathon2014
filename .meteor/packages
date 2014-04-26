@@ -4,13 +4,9 @@
 # but you can also edit it by hand.
 
 standard-app-packages
-autopublish
 insecure
-<<<<<<< HEAD
 jquery
 underscore
 handlebar-helpers
 iron-router
 iron-router-progress
-=======
->>>>>>> e571a70b93e4098bc5c568e6a5253c6ecb43892d
