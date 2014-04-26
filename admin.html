@@ -1,0 +1,55 @@
+<template name="adminLectureSidebar">
+  {{> feedbackCounts }}
+</template>
+
+  <template name="feedbackCounts">
+    <div id="tooFastCount">
+      {{#each tooFast}}
+        {{> updateTooFast}}
+      {{/each}}
+      {{tooFastCount}}
+    </div>
+    <div id="tooSlowCount">
+      {{#each tooSlow}}
+        {{> updateTooSlow}}
+      {{/each}}
+      {{tooSlowCount}}
+    </div>
+    <div id="goBackCount">
+      {{#each goBack}}
+        {{> updateGoBack}}
+      {{/each}}
+      {{goBackCount}}
+    </div>
+    <div id="dontUnderstandCount">
+      {{#each dontUnderstand}}
+        {{> updateDontUnderstand}}
+      {{/each}}
+      {{dontUnderstandCount}}
+    </div>
+  </template>
+
+  <template name="updateTooFast">
+
+  </template>
+  <template name="updateTooSlow">
+  </template>
+  <template name="updateGoBack">
+  </template>
+  <template name="updateDontUnderstand">
+  </template>
+
+<!-- adminLectureDetail for professors view -->
+<template name="adminLectureDetail">
+  <h1>{{lecture.name}} Admin Side</h1>
+  {{#each messages}}
+  {{#if presetType}}
+  <div class="adminSide {{presetType}}">{{content}}</div>
+  {{else}}
+  <div class="adminSide customFeedback">{{content}}</div>
+  {{/if}}
+  {{/each}}
+
+  <a href="{{ pathFor 'listLectures' }}">Back to lectures</a>
+  <!-- {{> exportFeedback}} -->
+</template>

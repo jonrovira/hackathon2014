@@ -71,3 +71,11 @@ li {
   font-size: 36px;
 
 }
+
+#tooFastCount, #tooSlowCount, #goBackCount, #dontUnderstandCount {
+  width: 100px;
+  height: 100px;
+  margin: 10px 10px 10px 10px;
+  background-color: #91AA9D;
+  color: #000;
+}
