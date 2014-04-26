@@ -1,17 +1,17 @@
 #credentials {
-	width: 160px;
+	width: 200px;
 	padding-top: 100px;
 	margin-right: auto;
 	margin-left: auto;
 }
 #credentials input {
-	width: 160px;
+	width: 196px;
 	border: 1px solid #aaa;
-	font-size: 14px;
+	font-size: 16px;
 	color: #777;
 }
 #credentials input:nth-child(3) {
-	width: 164px;
+	width: 200px;
 	color: #ffffff;
 	background-color: #024F40;
 }

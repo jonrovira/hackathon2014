@@ -5,6 +5,7 @@
 		<title>Feedback</title>
 
 		<link rel="stylesheet" href="packages/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/global.css">
 		<link rel="stylesheet" type="text/css" href="css/hub.css">
 	</head>
 
