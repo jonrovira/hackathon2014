@@ -1,15 +1,15 @@
-#wrapper #presets {
+#mobile-wrapper #presets {
 	padding-top: 30px;
 	text-align: center;
 }
-#wrapper #presets #canvas {
+#mobile-wrapper #presets #canvas {
 	width: 222px;
 	height: 222px;
 }
-#wrapper #ask {
+#mobile-wrapper #ask {
 	cursor: pointer;
 }
-#wrapper #ask h2 {
+#mobile-wrapper #ask h2 {
 	width: 180px;
 	padding: 8px 20px;
 	margin-right: auto;
@@ -18,4 +18,43 @@
 	border-radius: 3px;
 	background-color: #D1DBBD;
 	color: #3E606F;
+}
+#desktop-wrapper {
+	display: none;
+}
+
+
+@media(min-width: 1024px) {
+	#mobile-wrapper {
+		display: none;
+	}
+	#desktop-wrapper {
+		display: block;
+	}
+	#desktop-wrapper #presets {
+		padding-top: 30px;
+	}
+	#desktop-wrapper #presets #canvas2 {
+		list-style-type: none;
+	}
+	#desktop-wrapper #presets #canvas2 li div {
+		border-radius: 50%;
+		width: 100px;
+		height: 100px;
+		vertical-align: middle;
+		background-color: white;
+	}
+	#desktop-wrapper #ask {
+		cursor: pointer;
+	}
+	#desktop-wrapper #ask h2 {
+		width: 180px;
+		padding: 8px 20px;
+		margin-right: auto;
+		margin-left: auto;
+		border: 1px solid #D1DBBD;
+		border-radius: 3px;
+		background-color: #D1DBBD;
+		color: #3E606F;
+	}
 }

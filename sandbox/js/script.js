@@ -20,7 +20,7 @@ $(document).ready(function() {
 		$back.attr("href", "");
 		$heading.html(title);
 	}
-	else if(title == "Choose your course") {
+	else if(title == "Choose your class") {
 		$back.attr("href", "/sandbox/login.php");
 		$heading.html(title);
 		$('#wrapper ul li').click(function() {

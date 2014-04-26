@@ -36,13 +36,15 @@
 
 @media(min-width: 1024px) {
 	#wrapper ul {
-		width: 400px;
-		padding-top: 220px;
+		width: 450px;
+		padding-top: 120px;
 	}
 	#wrapper ul li h4 {
 		padding-top: 15px;
+		font-size: 22px;
 	}
 	#wrapper ul li h6 {
-		
+		padding-bottom: 15px;
+		font-size: 15px;
 	}
 }

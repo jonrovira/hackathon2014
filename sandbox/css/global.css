@@ -53,6 +53,7 @@ html, body {
 		margin-right: 25px;
 	}
 	#header ul li p {
+		margin-top: 13px;
 		font-size: 30px;
 	}
 	#header ul li a img {
