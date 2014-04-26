@@ -13,12 +13,7 @@
 		<?php include 'header.html'; ?>
 
 		<div id="wrapper">
-			<div id="presets">
-				<canvas id="myCanvas" resize></canvas>
-			</div>
-			<div id="ask">
-				<h2>Ask a question.</h2>
-			</div>
+			
 		</div>
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>

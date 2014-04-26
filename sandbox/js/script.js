@@ -21,6 +21,7 @@ $(document).ready(function() {
 		$heading.html(title);
 	}
 	else if(title == "Ask a question") {
+		$back.attr("href", "/sandbox/hub.php");
 		$heading.html(title);
 	}
 

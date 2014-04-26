@@ -12,6 +12,7 @@
 #wrapper ul li {
 	margin-bottom: 8px;
 	border: 1px solid #aaa;
+	border-radius: 3px;
 	text-align: left;
 	background-color: #037F67;
 	font-weight: normal;

@@ -6,13 +6,21 @@
 }
 #credentials input {
 	width: 196px;
-	border: 1px solid #bbb;
+	margin-bottom: 5px;
+	border: 1px solid #dedede;
+	border-top-color: #bbb;
+	box-shadow: inset 1px 2px 5px 0px #eee;
+	transition: box-shadow .12s ease-in-out;
+	border-radius: 3px;
 	font-size: 16px;
 	color: #777;
 }
 #credentials input:nth-child(3) {
 	width: 200px;
 	height: 30px;
+	border-top-color: #dedede;
+	box-shadow: none;
+	transition: none;
 	color: #ffffff;
 	background-color: #024F40;
 	cursor: pointer;
