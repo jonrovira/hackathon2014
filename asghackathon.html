@@ -1,40 +1,129 @@
 <head>
-  <title>Insert Project Title Here</title>
+  <title>Welcome to Census</title>
 </head>
 
 <body>
-
 </body>
+
+<!-- createLecture template to create a new lecture -->
+
+
 <template name="createLecture">
   <h1>Create a Lecture</h1>
   <label for="lectureName">Name:</label> <input type="field" id="lectureName">
   <input type="button" id="submitLectureName" value="Create!">
+  <br>
+  {{> linkLecturesAndAdmins}}
 </template>
 
+<!--<template name="linkLecturesAndAdmins">
+  <label for="linkEmail">Email: </label><input type="text" id="linkEmail"><br>
+  <label for="linkLecture">Lecture ID: </label><input type="text" id="linkLecture">
+  <input type="button" id="submitLinkLectureAndAdmin" value="Link!">
+</template> -->
+
+
+<!-- listLectures template to list all lectures -->
 <template name="listLectures">
-  <h1>Current Lectures</h1>
-  <ul>
+  <select id="chooseLectureList" class="btn btn-default">
     {{#each lectures}}
-    <li><a href="{{ pathFor 'lectureDetail' }}">{{name}}</a></li>
+    {{> listLecturesItem}}
     {{/each}}
-  </ul>
+  </select>
+  <input type="button" id="chooseLecture" value="Go!">
 </template>
 
-<template name="lectureDetail">
+
+<template name="promptChooseLecture">
+  <h1>Please choose a lecture on your left.</h1>
+</template>
+
+<!-- listLecturesItem template to format each lecture name in listLectures -->
+<template name="listLecturesItem">
+  <option value="{{ index }}">{{name}}</option>
+</template>
+
+
+<!-- studentLectureDetail template to display the interface for a particular lecture -->
+<template name="studentLectureDetail">
   <h1>{{lecture.name}}</h1>
-  <ul>
     {{#each messages}}
-    <li>{{content}}</li>
-
+    <div class="panel-heading panel-default preset-{{presetType}}">
+      <div class="panel-heading">
+        
+      </div>
+      <div class="panel-body">
+        {{content}}
+      </div>
+    </div>
     {{/each}}
-  </ul>
+</template>
 
+<template name="studentLectureSidebar">
+  {{> listLectures}}
+
+  {{> submitFeedback}}
+</template>
+
+<!-- submitFeedback template for default and custom responses in studentLectureDetail -->
+<template name="submitFeedback">
   <h3>Ask a question</h3>
-  <input type="button" id="lectureTooFast" value="Please slow down a bit!">
-  <input type="button" id="lectureTooSlow" value="You can speed up a bit">
-  <input type="button" id="goBackSlide" value="Can you go back a slide?">
-  <input type="button" id="doNotUnderstandContent" value="I don't understand this.">
-  <input type="text" id="feedbackContent">
-  <input type="button" id="submitNewFeedback" value="Submit">
+  <input type="button" id="lectureTooFast" value="Please slow down a bit!"><br>
+  <input type="button" id="lectureTooSlow" value="You can speed up a bit"><br>
+  <input type="button" id="goBackSlide" value="Can you go back a slide?"><br>
+  <input type="button" id="doNotUnderstandContent" value="I don't understand this."><br>
+  <input type="text" id="feedbackContent"><br>
+  <input type="button" id="submitNewFeedback" value="Submit"><br>
+</template>
+
+<!-- adminLectureDetail for professors view -->
+<template name="adminLectureDetail">
+  <h1>{{lecture.name}} Admin Side</h1>
+  {{#each messages}}
+  {{#if presetType}}
+  <div class="adminSide {{presetType}}">{{content}}</div>
+  {{else}}
+  <div class="adminSide customFeedback">{{content}}</div>
+  {{/if}}
+  {{/each}}
+
   <a href="{{ pathFor 'listLectures' }}">Back to lectures</a>
+  <!-- {{> exportFeedback}} -->
+</template>
+
+<!--
+<template name="exportFeedback">
+  {{#if exportDone}}
+    Sent!
+  {{else}}
+    <input type="text" id="exportEmail" placeholder="Enter email"><input type="button" id="exportSubmit" value="Export">
+  {{/if}} 
+</template> -->
+
+<!-- layout template for overall look and feel -->
+<template name="layout">
+
+  <div class="container-fluid">
+    <div class="col-md-3 sidebar">
+      {{> loginButtons}}
+      <a class="logo" href="/">Census</a><br><br>
+      {{> yield "sidebar"}}
+    </div>
+    <div class="col-md-9 mainContent">
+      {{> yield}}
+    </div>
+
+  </div>
+</template>
+
+
+<!-- loading template for when the client is ever waiting for something to finish loading -->
+<template name="loading">
+  <h1>Loading...</h1>
+</template>
+
+
+<!-- notFound template for when router can't identify corresponding route -->
+<template name="notFound">
+  <h1>Oops, we can't find what you're looking for!</h1>
 </template>

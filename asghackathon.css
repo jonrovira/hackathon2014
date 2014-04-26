@@ -1,1 +1,73 @@
 /* CSS declarations go here */
+body {
+  font-family: "Arial";
+  font-size: 14px/21px;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 46px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 21px;
+}
+
+li {
+  list-style: none;
+}
+
+#login-buttons {
+  float: right;
+  color: #FCFFF5;
+}
+
+.customFeedback {
+  font-size: 35px;
+  text-align: center;
+  width: 100%;
+  min-height: 75px;
+  border: 2px solid #888;
+  padding-top: auto;
+  padding-bottom: auto;
+}
+
+#chooseLectureList {
+  background-color: #fff;
+}
+
+.logo, .logo a, .logo a:hover, .logo a:focus {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 50px;
+  width: 100%;
+  color: #FCFFEF;
+}
+
+.sidebar {
+  height: 100%;
+  float: left;
+  background-color: #193441;
+  padding-left: 0px;
+}
+
+.mainContent {
+  height: 100%;
+}
+
+.panel-default {
+  font-size: 36px;
+
+}
