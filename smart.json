@@ -1,0 +1,7 @@
+{
+  "packages": {
+    "handlebar-helpers": {},
+    "iron-router": {},
+    "iron-router-progress": {}
+  }
+}

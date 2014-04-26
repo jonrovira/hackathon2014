@@ -1,0 +1,38 @@
+<head>
+  <title>Insert Project Title Here</title>
+</head>
+
+<body>
+  {{> createLecture}}
+</body>
+
+<template name="hello">
+  <h1>Hello World!</h1>
+  {{greeting}}
+  <input type="button" value="Click" />
+</template>
+
+<template name="createLecture">
+  <h1>Create a Lecture</h1>
+  <label for="lectureName">Name:</label> <input type="field" id="lectureName">
+  <input type="button" id="submitLectureName" value="Create!">
+</template>
+
+<template name="listLectures">
+  <h1>Current Lectures</h1>
+  <ul>
+    {{#each lectures}}
+    <li><a href="{{ pathFor 'lectureDetail' }}">{{name}}</a></li>
+    {{/each}}
+  </ul>
+</template>
+
+<template name="lectureDetail">
+  <h1>{{name}}</h1>
+  <ul>
+    {{#each messages}}
+    <li>{{content}}</li>
+
+    {{/each}}
+  </ul>
+</template>
