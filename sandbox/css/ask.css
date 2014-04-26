@@ -1,0 +1,37 @@
+#wrapper #screen {
+	height: 345px;
+}
+#wrapper #screen #messages {
+	width: 250px;
+	height: 320px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#wrapper #screen #messages p {
+	padding: 5px;
+	background-color: #00B592;
+	border: 1px solid #00B592;
+	border-radius: 5px;
+	color: #ffffff;
+	line-height: 16px;
+	font-size: 12px;
+}
+#wrapper #screen #typefield {
+	width: 250px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#wrapper #screen #typefield #field {
+	width: 190px;
+	padding: 1px 4px;
+	line-height: 17px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+#wrapper #screen #typefield #send {
+	margin-right: auto;
+	background-color: #3EBADB;
+	border: 1px solid #3EBADB;
+	border-radius: 3px;
+	color: #ffffff;
+}

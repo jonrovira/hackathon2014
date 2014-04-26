@@ -12,16 +12,20 @@
 	box-shadow: inset 1px 2px 5px 0px #eee;
 	transition: box-shadow .12s ease-in-out;
 	border-radius: 3px;
-	font-size: 16px;
+	font-size: 15px;
 	color: #777;
 }
+#credentials input:nth-child(1),
+#credentials input:nth-child(2) {
+	padding: 3px 0 3px 7px;
+}
 #credentials input:nth-child(3) {
-	width: 200px;
+	width: 205px;
 	height: 30px;
 	border-top-color: #dedede;
 	box-shadow: none;
 	transition: none;
 	color: #ffffff;
-	background-color: #024F40;
+	background-color: #037F67; /*024f40*/
 	cursor: pointer;
 }

@@ -1,3 +1,6 @@
+#wrapper #ask {
+	cursor: pointer;
+}
 #wrapper #ask h2 {
 	width: 180px;
 	padding: 8px 20px;

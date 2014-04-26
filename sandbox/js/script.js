@@ -19,6 +19,9 @@ $(document).ready(function() {
 	else if(title == "Feedback") {
 		$back.attr("href", "/sandbox/courses.php");
 		$heading.html(title);
+		$('#wrapper #ask').click(function() {
+			window.location.href = "/sandbox/ask.php";
+		});
 	}
 	else if(title == "Ask a question") {
 		$back.attr("href", "/sandbox/hub.php");

@@ -13,7 +13,17 @@
 		<?php include 'header.html'; ?>
 
 		<div id="wrapper">
-			
+			<div id="screen">
+				<div id="messages">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed vulputate lacus, ut viverra urna. Curabitur a suscipit turpis.</p>
+					<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur varius lobortis felis, id molestie metus malesuada lobortis.</p>
+					<p>Maecenas ultricies convallis dui, sit amet malesuada purus convallis a. Fusce ac lobortis nisl. Pellentesque vel neque eget augue bibendum posuere eu ac massa.</p>
+				</div>
+				<div id="typefield">
+					<input type="text" id="field" placeholder="Ask a question">
+					<input type="submit" id="send" value="Send">
+				</div>
+			</div>
 		</div>
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
