@@ -1,35 +1,3 @@
-html, body {
-	font-family: Helvetica, Arial;
-}
-
-
-#header ul {
-	padding: 0;
-	margin: 0;
-	height: 32px;
-	vertical-align: middle;
-}
-#header p{
-	margin: 0;
-	margin-top: 8px;
-	display: inline-block;
-}
-#header ul i {
-	float: left;
-}
-#header ul p {
-	float: right;
-}
-#header > p {
-	position: absolute;
-	left: 50%;
-	top: 8px;
-}
-#header hr {
-	border: 1px solid #eee;
-}
-
-
 #credentials {
 	width: 160px;
 	padding-top: 100px;
@@ -43,6 +11,7 @@ html, body {
 	color: #777;
 }
 #credentials input:nth-child(3) {
+	width: 164px;
 	color: #ffffff;
 	background-color: #024F40;
 }
