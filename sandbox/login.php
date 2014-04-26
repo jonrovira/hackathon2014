@@ -5,6 +5,7 @@
 		<title>Log in</title>
 
 		<link rel="stylesheet" href="packages/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/global.css">
 		<link rel="stylesheet" type="text/css" href="css/login.css">
 	</head>
 
@@ -12,9 +13,9 @@
 		<?php include 'header.html'; ?>
 
 		<div id="credentials">
-			<input type="text" id="netid" value="Net ID">
-			<input type="text" id="netidpass" value="Password">
-			<input type="submit" id="submit" value="Log in">
+			<input type="text" id="netid" placeholder="Net ID">
+			<input type="password" id="netidpass" placeholder="Password">
+			<input type="submit" id="submit" value="Log in" onclick="window.location='/sandbox/courses.php';">
 		</div>
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>

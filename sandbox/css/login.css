@@ -1,48 +1,17 @@
-html, body {
-	font-family: Helvetica, Arial;
-}
-
-
-#header ul {
-	padding: 0;
-	margin: 0;
-	height: 32px;
-	vertical-align: middle;
-}
-#header p{
-	margin: 0;
-	margin-top: 8px;
-	display: inline-block;
-}
-#header ul i {
-	float: left;
-}
-#header ul p {
-	float: right;
-}
-#header > p {
-	position: absolute;
-	left: 50%;
-	top: 8px;
-}
-#header hr {
-	border: 1px solid #eee;
-}
-
-
 #credentials {
-	width: 160px;
+	width: 200px;
 	padding-top: 100px;
 	margin-right: auto;
 	margin-left: auto;
 }
 #credentials input {
-	width: 160px;
+	width: 196px;
 	border: 1px solid #aaa;
-	font-size: 14px;
+	font-size: 16px;
 	color: #777;
 }
 #credentials input:nth-child(3) {
+	width: 200px;
 	color: #ffffff;
 	background-color: #024F40;
 }
