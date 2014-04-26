@@ -1,0 +1,48 @@
+html, body {
+	font-family: Helvetica, Arial;
+}
+
+#header ul {
+	padding: 0;
+	margin: 0;
+	height: 32px;
+	vertical-align: middle;
+}
+#header p{
+	margin: 0;
+	margin-top: 7px;
+	display: inline-block;
+}
+#header i {
+	float: left;
+}
+#header p:nth-child(2) {
+	margin-left: 105px;
+}
+#header p:nth-child(3) {
+	float: right;
+}
+#header hr {
+	border: 1px solid #eee;
+}
+
+body > ul {
+	padding: 0;
+	padding-top: 120px;
+}
+
+.course {
+	padding: 0;
+	display: block;
+	height: 45px;
+	width: 150px;
+	border: 1px solid #999;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	
+}
+
+ul {
+	padding-top: 120px;
+}
