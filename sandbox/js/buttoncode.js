@@ -178,6 +178,31 @@ hitBox4.onMouseDown = function(event) {
     completion4 += 0.1;
 }
 
+//ALL TEXT
+var faster = new PointText(new Point(45, 40));
+faster.fillColor = 'black';
+faster.justification = 'center';
+faster.fontSize = 14;
+faster.content = 'Go\nFaster';
+
+var slower = new PointText(new Point(160, 40));
+slower.fillColor = 'black';
+slower.justification = 'center';
+slower.fontSize = 14;
+slower.content = 'Go\nSlower';
+
+var understand = new PointText(new Point(45, 155));
+understand.fillColor = 'black';
+understand.justification = 'center';
+understand.fontSize = 14;
+understand.content = 'I Don\'t\nUnderstand';
+
+var example = new PointText(new Point(160, 155));
+example.fillColor = 'black';
+example.justification = 'center';
+example.fontSize = 14;
+example.content = 'Give An\nExample';
+
 
 //every frame: update completion and the semicircle
 function onFrame(event) {
