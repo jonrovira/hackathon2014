@@ -2,20 +2,23 @@
 <html>
 
 	<head>
-		<title>Log in</title>
+		<title>Ask a question</title>
 
 		<link rel="stylesheet" href="packages/font-awesome/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="css/global.css">
-		<link rel="stylesheet" type="text/css" href="css/login.css">
+		<link rel="stylesheet" type="text/css" href="css/ask.css">
 	</head>
 
 	<body>
 		<?php include 'header.html'; ?>
 
-		<div id="credentials">
-			<input type="text" id="netid" placeholder="Net ID">
-			<input type="password" id="netidpass" placeholder="Password">
-			<input type="submit" id="submit" value="Log in" onclick="window.location='/sandbox/courses.php';">
+		<div id="wrapper">
+			<div id="presets">
+				<canvas id="myCanvas" resize></canvas>
+			</div>
+			<div id="ask">
+				<h2>Ask a question.</h2>
+			</div>
 		</div>
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
