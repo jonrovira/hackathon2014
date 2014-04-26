@@ -1,24 +1,21 @@
-var background = new Rectangle(new Point(0, 0), new Point(140, 140));
-var backg = new Path.Rectangle(background);
-backg.fillColor = 'purple';
-var outerCircle = new Path.Circle(new Point(70, 70), 50);
+var outerCircle = new Path.Circle(new Point(50, 50), 50);
 outerCircle.fillColor = 'black';
-var innerCircle = new Path.Circle(new Point(70, 70), 45);
+var innerCircle = new Path.Circle(new Point(50, 50), 45);
 innerCircle.fillColor = 'white';
 
 //goes fom 0 to 1, represents completion % of the circle
 var completion = 0.0;
 
 //distance from bottom of circle
-var yval = 115 - (completion) * 90;
+var yval = 95 - (completion) * 90;
 //distance from center of circle (+/-)
 var xval = Math.sqrt(Math.pow(45,2) - Math.pow((Math.abs(completion * 90 - 45)),2));
 
 //left side of the semicircle
-var firstPoint = new Point(70 - xval, yval);
+var firstPoint = new Point(50 - xval, yval);
 
 //point on the bottom middle of the circle, never changes
-var throughPoint = new Point(70, 115);
+var throughPoint = new Point(50, 95);
 
 // The point at which the arc will end on the right side of the circle
 var toPoint = new Point(70 + xval, yval);
@@ -36,10 +33,16 @@ path.opacity = 0.5;
 path.closed = true;
 path.fillColor = 'red';
 
+var hitBox = new Path.Circle(new Point(50, 50), 45);
+hitBox.fillColor = 'white';
+hitBox.opacity = 0;
+
 //click on the white circle
-innerCircle.onMouseDown = function(event) {
+hitBox.onMouseDown = function(event) {
     completion += 0.1;
 }
+
+
 
 //every frame: update completion and the semicircle
 function onFrame(event) {
@@ -55,15 +58,21 @@ function onFrame(event) {
 	}
 	//get rid of the old path
 	path.visible = false;
-	yval = 115 - (completion) * 90;
+	yval = 95 - (completion) * 90;
     xval = Math.sqrt(Math.pow(45,2) - Math.pow((Math.abs(completion * 90 - 45)),2));
     path = new Path.Arc({
-    from: [70 - xval, yval],
-    through: [70, 115],
-    to: [70 + xval, yval],
+    from: [50 - xval, yval],
+    through: [50, 95],
+    to: [50 + xval, yval],
     strokeColor: 'red'
 });
     path.opacity = 0.5;
     path.closed = true;
     path.fillColor = 'red';
+    var hitBox = new Path.Circle(new Point(50, 50), 45);
+    hitBox.fillColor = 'white';
+    hitBox.opacity = 0;
+    hitBox.onMouseDown = function(event) {
+    completion += 0.1;
+}
 }
