@@ -169,7 +169,7 @@ path4.opacity = 0.5;
 path4.closed = true;
 path4.fillColor = 'red';
 
-var hitBox4 = new Path.Circle(new Point(160, 200), 45);
+var hitBox4 = new Path.Circle(new Point(160, 160), 45);
 hitBox4.fillColor = 'white';
 hitBox4.opacity = 0;
 
@@ -298,7 +298,7 @@ function onFrame(event) {
     path4.opacity = 0.5;
     path4.closed = true;
     path4.fillColor = 'red';
-    var hitBox4 = new Path.Circle(new Point(160, 200), 40);
+    var hitBox4 = new Path.Circle(new Point(160, 160), 40);
     hitBox4.fillColor = 'white';
     hitBox4.opacity = 0;
     hitBox4.onMouseDown = function(event) {
