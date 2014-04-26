@@ -35,6 +35,7 @@ path1.closed = true;
 path1.fillColor = 'white';
 
 var hitBox1 = new Path.Circle(new Point(45, 45), 40);
+hitBox1.id = '#lecturetoofast';
 hitBox1.fillColor = 'white';
 hitBox1.opacity = 0;
 
@@ -243,6 +244,7 @@ function onFrame(event) {
     path1.closed = true;
     path1.fillColor = 'white';
     var hitBox1 = new Path.Circle(new Point(45, 45), 40);
+    hitBox1.id = '#lecturetoofast';
     hitBox1.fillColor = 'white';
     hitBox1.opacity = 0;
     hitBox1.onMouseDown = function(event) {
