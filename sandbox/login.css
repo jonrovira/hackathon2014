@@ -1,0 +1,38 @@
+html, body {
+	font-family: Helvetica, Arial;
+}
+
+#header ul {
+	padding: 0;
+	margin: 0;
+}
+#header p{
+	margin: 0;
+	display: inline-block;
+}
+#header p:nth-child(1) {
+	float: left;
+}
+#header p:nth-child(2) {
+	margin-left: 120px;
+}
+#header p:nth-child(3) {
+	float: right;
+}
+#header hr {
+	border: 1px solid #eee;
+}
+
+#credentials {
+	width: 160px;
+	padding-top: 100px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#credentials input {
+	width: 160px;
+	border: 1px solid #aaa;
+	font-size: 14px;
+	color: #777;
+}
