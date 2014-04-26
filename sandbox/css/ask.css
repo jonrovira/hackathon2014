@@ -1,18 +1,19 @@
 #wrapper #screen {
-	height: 345px;
+	height: 420px;
 }
 #wrapper #screen #messages {
 	width: 250px;
-	height: 320px;
+	height: 380px;
+	padding-top: 10px;
 	margin-right: auto;
 	margin-left: auto;
 }
 #wrapper #screen #messages p {
 	padding: 5px;
-	background-color: #00B592;
-	border: 1px solid #00B592;
+	background-color: #D1DBBD;
+	border: 1px solid #D1DBBD;
 	border-radius: 5px;
-	color: #ffffff;
+	color: #193441;
 	line-height: 16px;
 	font-size: 12px;
 }
@@ -22,16 +23,17 @@
 	margin-left: auto;
 }
 #wrapper #screen #typefield #field {
-	width: 190px;
+	width: 194px;
 	padding: 1px 4px;
 	line-height: 17px;
-	border: 1px solid #ccc;
+	background-color: #FCFFF5;
+	border: 1px solid #FCFFF5;
 	border-radius: 3px;
 }
 #wrapper #screen #typefield #send {
 	margin-right: auto;
-	background-color: #3EBADB;
-	border: 1px solid #3EBADB;
+	background-color: #91AA9D;
+	border: 1px solid #91AA9D;
 	border-radius: 3px;
-	color: #ffffff;
+	color: #193441;
 }

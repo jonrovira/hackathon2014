@@ -18,7 +18,7 @@ html, body {
 	vertical-align: middle;
 	list-style-type: none;
 	text-align: center;
-	color: #fcfff5;
+	color: #91AA9D;
 }
 #header ul li {
 	display: inline-block;
@@ -34,7 +34,7 @@ html, body {
 #header ul li a:hover {color: black;}
 #header ul li a:active {color: black;}
 #header ul li i {
-	color: #fcfff5;
+	color: #91AA9D;
 }
 #header ul li p {
 	margin-top: 8px;

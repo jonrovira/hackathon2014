@@ -11,21 +11,21 @@
 }
 #wrapper ul li {
 	margin-bottom: 8px;
-	border: 1px solid #aaa;
+	border: 1px solid #3E606F;
 	border-radius: 3px;
 	text-align: left;
-	background-color: #037F67;
-	color: #eee;
+	background-color: #3E606F;
+	color: #fcfff5;
 	cursor: pointer;
 }
 #wrapper ul li:hover {
 	opacity: 0.5;
 }
 #wrapper ul li h4, #wrapper ul li h6 {
-	padding-left: 5px;
+	padding-left: 10px;
 }
 #wrapper ul li h4 {
-	padding-top: 5px;
+	padding-top: 10px;
 	margin: 0;
 }
 #wrapper ul li h6 {

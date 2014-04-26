@@ -15,9 +15,11 @@
 		<div id="wrapper">
 			<div id="screen">
 				<div id="messages">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed vulputate lacus, ut viverra urna. Curabitur a suscipit turpis.</p>
-					<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur varius lobortis felis, id molestie metus malesuada lobortis.</p>
-					<p>Maecenas ultricies convallis dui, sit amet malesuada purus convallis a. Fusce ac lobortis nisl. Pellentesque vel neque eget augue bibendum posuere eu ac massa.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed vulputate lacus, ut viverra urna. Curabitur a suscipit turpis?</p>
+					<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur varius lobortis felis, id molestie metus malesuada lobortis?</p>
+					<p>Maecenas ultricies convallis dui, sit amet malesuada purus convallis a. Fusce ac lobortis nisl. Pellentesque vel neque eget augue bibendum posuere eu ac massa?</p>
+					<p>Donec euismod massa et erat scelerisque, et sodales dui tincidunt?</p>
+					<p>Integer sit amet ligula non ante luctus ultricies?</p>
 				</div>
 				<div id="typefield">
 					<input type="text" id="field" placeholder="Ask a question">

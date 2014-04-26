@@ -5,7 +5,7 @@ $(document).ready(function() {
 	var $heading = $('#header ul li:nth-child(2) p');
 
 	if(title == "Log in") {
-		$back.css("opacity", "0.3");
+		$back.css("opacity", "0.2");
 		$back.attr("href", "");
 		$heading.html(title);
 	}
