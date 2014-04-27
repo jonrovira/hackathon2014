@@ -6,73 +6,114 @@ if (Meteor.isClient) {
   Meteor.subscribe('lectures');
   Meteor.subscribe('allUsers');
 
-  Template.listLectures.events({
-    'click #chooseLecture': function() {
-      var chosenLectureId = parseInt(document.getElementById("chooseLectureList").value);
-      Router.go('/'+chosenLectureId);
-    }
-  })
-
-  Template.studentLectureSidebar.events({
-
-    'click #submitNewFeedback': function() {
-      var content = document.getElementById("feedbackContent").value;
+  Template.studentDesktop.events({
+    'click #hubdesktopsend': function() {
+      var content = document.getElementById("hubdesktopfield").value;
       var currentLectureId = Session.get('currentLectureId');
-      Messages.insert({content: content, lecture: currentLectureId, presetType: false});
-      document.getElementById("feedbackContent").value = '';
+      Meteor.call('createMessage', content, currentLectureId, false);
+      document.getElementById("hubdesktopfield").value = '';
     },
 
     'click #lectureTooFast': function() {
       var currentLectureId = Session.get('currentLectureId');
-      Messages.insert({content: "You're going too fast!", lecture: currentLectureId, presetType: "tooFast"});
+      Meteor.call('createMessage', "You're going too fast", currentLectureId, "tooFast");
+
     },
 
     'click #lectureTooSlow': function() {
       var currentLectureId = Session.get('currentLectureId');
-      Messages.insert({content: "Please go a bit faster", lecture: currentLectureId, presetType: "tooSlow"});
+      Meteor.call('createMessage', "You're going too slow", currentLectureId, "tooSlow");
+
     },
     'click #goBackSlide': function() {
       var currentLectureId = Session.get('currentLectureId');
-      Messages.insert({content: "Can you go back a slide?", lecture: currentLectureId, presetType: "backSlide"});
+      Meteor.call('createMessage', "Can you go back a slide?", currentLectureId, "backSlide");
+
     },
 
     'click #dontUnderstand': function() {
       var currentLectureId = Session.get('currentLectureId');
-      Messages.insert({content: "I don't understand this.", lecture: currentLectureId, presetType: "dontUnderstand"});
+      Meteor.call('createMessage', "I don't understand", currentLectureId, "dontUnderstand");
+
     }
   });
 
-Template.updateTooFast.rendered = function() {
-  $('#tooFastCount').fadeOut(200).fadeIn(200);
-};
+  Template.studentMobileAsk.events({
+    'click #asksend': function() {
+      var content = document.getElementById("askfield").value;
+      var currentLectureId = Session.get('currentLectureId');
+      Meteor.call('createMessage', content, currentLectureId, false);
+      document.getElementById("askfield").value = '';
+    }
+  });
+  
+  Template.studentMobilePresets.events({
+    'click #lectureTooFast': function() {
+      var currentLectureId = Session.get('currentLectureId');
+      Meteor.call('createMessage', "You're going too fast", currentLectureId, "tooFast");
+  
+    },
+  
+    'click #lectureTooSlow': function() {
+      var currentLectureId = Session.get('currentLectureId');
+      Meteor.call('createMessage', "You're going too slow", currentLectureId, "tooSlow");
+  
+    },
+    'click #goBackSlide': function() {
+      var currentLectureId = Session.get('currentLectureId');
+      Meteor.call('createMessage', "Can you go back a slide?", currentLectureId, "backSlide");
+  
+    },
+  
+    'click #dontUnderstand': function() {
+      var currentLectureId = Session.get('currentLectureId');
+      Meteor.call('createMessage', "I don't understand", currentLectureId, "dontUnderstand");
+  
+    }
+  });
+  
+  Template.updateTooFast.rendered = function() {
+    $('#tooFastCount').fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+  };
+  
+  Template.updateTooSlow.rendered = function() {
+    $('#tooSlowCount').fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+  };
+  
+  Template.updateGoBack.rendered = function() {
+    $('#goBackCount').fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+  };
+  
+  Template.updateDontUnderstand.rendered = function() {
+    $('#dontUnderstandCount').fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+  };
 
-Template.updateTooSlow.rendered = function() {
-  $('#tooSlowCount').fadeOut(100).fadeIn(100);
-};
-
-Template.updateGoBack.rendered = function() {
-  $('#goBackCount').fadeOut(100).fadeIn(100);
-};
-
-Template.updateDontUnderstand.rendered = function() {
-  $('#dontUnderstandCount').fadeOut(100).fadeIn(100);
-};
-
-Template.updateTooFast.helpers({
-  tooFastCount: Messages.find({lecture: Session.get('currentLectureId'), presetType: "tooFast"}).count()
-});
-
-Template.updateTooSlow.helpers({
-  tooFastCount: Messages.find({lecture: Session.get('currentLectureId'), presetType: "tooSlow"}).count()
-});
-
-Template.updateGoBack.helpers({
-  tooFastCount: Messages.find({lecture: Session.get('currentLectureId'), presetType: "backSlide"}).count()
-});
-
-Template.updateDontUnderstand.helpers({
-  tooFastCount: Messages.find({lecture: Session.get('currentLectureId'), presetType: "dontUnderstand"}).count()
-});
 }
 
+if (Meteor.isServer) {
+  Lectures.allow({ //can't do anything to lectures
+    insert: function(userId, doc) {
+      return false;
+    },
+    update: function(userId, doc, fieldNames, modifier) {
+      return false;
+    },
+    remove: function(userId, doc) {
+      return false;
+    }
 
+  });
+
+  Messages.allow({
+    insert: function(userId, doc) {
+      return true;
+    },
+    update: function() {
+      return false;
+    },
+    remove: function(userId, doc) {
+      return (userId && userId == doc.admin);
+    }
+
+  });
+}

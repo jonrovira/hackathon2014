@@ -1,15 +1,6 @@
 <!-- layout template for overall look and feel -->
 <template name="layout">
-
-  <div class="container-fluid">
-    <div class="col-md-3 sidebar">
-      {{> loginButtons}}
-      <a class="logo" href="/">Census</a><br><br>
-      {{> yield "sidebar"}}
-    </div>
-    <div class="col-md-9 mainContent">
-      {{> yield}}
-    </div>
-
-  </div>
+{{> headerTemplate}}
+{{> yield "mobile"}}
+{{> yield}}
 </template>

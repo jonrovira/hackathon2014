@@ -61,4 +61,16 @@ if (Meteor.isServer) {
         });
       };
     });
+
+  Meteor.methods({
+    createMessage: function(content, lectureId, presetType) {
+      Messages.insert({content: content, lecture: lectureId, presetType: presetType});
+    },
+    countMessagesByPresetType: function(lectureId, presetType) {
+      Messages.find({lecture: lectureId, presetType: presetType}).count();
+    },
+    clearAll: function(lectureId) {
+      Messages.remove({lecture: lectureId});
+    }
+  });
 }

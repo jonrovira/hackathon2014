@@ -2,6 +2,7 @@
   "packages": {
     "handlebar-helpers": {},
     "iron-router": {},
-    "iron-router-progress": {}
+    "iron-router-progress": {},
+    "device-detection": {}
   }
 }

@@ -1,85 +1,430 @@
-/* CSS declarations go here */
-body {
-  font-family: "Helvetica";
-  font-size: 14px/21px;
+/* Admin */
+
+@font-face {
+  font-family: Nevis;
+  src: url("/fonts/nevis.ttf");
+}
+
+html, body {
+  font-family: Helvetica, Arial;
+}
+
+#header ul {
+  padding: 0;
+  margin: 0;
+  height: 32px;
+  vertical-align: middle;
+}
+#header p{
+  margin: 0;
+  margin-top: 7px;
+  display: inline-block;
+}
+#header i {
+  float: left;
+}
+#header p:nth-child(2) {
+  margin-left: 105px;
+}
+#header p:nth-child(3) {
+  float: right;
+}
+#header hr {
+  border: 1px solid #eee;
+}
+
+#adminproductname {
+  position: absolute;
+  top: 70px;
+  left: 500px;
+  border: 1px solid #eee;
+  height: 120px;
+  width: 250px;
+  text-align: center;
+
+}
+
+.adminsidepanel {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  height: 450px;
+  width: 300px;
+}
+
+.span4 {
+  margin-top: 20px;
+  height: 130px;
+  border: 1px solid #999;
+  text-align: center;
+
+}
+
+#adminlivefeed {
+  position: absolute;
+  top: 222px;
+  left: 380px;
+  border: 1px solid #999;
+  width: 880px;
+  height: 434px;
+}
+
+
+/* Ask */
+
+@media(min-width: 1024px) {
+  #askwrapper {
+    display: none;
+  }
+}
+
+#askwrapper #askscreen {
+  height: 420px;
+}
+#askwrapper #askscreen #askmessages {
+  width: 250px;
+  height: 380px;
+  padding-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+#askwrapper #askscreen #askmessages p {
+  padding: 5px;
+  background-color: #D1DBBD;
+  border: 1px solid #D1DBBD;
+  border-radius: 5px;
+  color: #193441;
+  line-height: 16px;
+  font-size: 12px;
+}
+#askwrapper #askscreen #asktypefield {
+  width: 250px;
+  margin-right: auto;
+  margin-left: auto;
+}
+#askwrapper #askscreen #asktypefield #askfield {
+  width: 194px;
+  padding: 1px 4px;
+  line-height: 17px;
+  background-color: #FCFFF5;
+  border: 1px solid #FCFFF5;
+  border-radius: 3px;
+}
+#askwrapper #askscreen #asktypefield #asksend {
+  margin-right: auto;
+  background-color: #91AA9D;
+  border: 1px solid #91AA9D;
+  border-radius: 3px;
+  color: #193441;
+}
+
+/* Courses */
+
+#coursewrapper {
+  width: 100%;
+}
+
+#coursewrapper a{
   text-decoration: none;
 }
-
-h1, h2, h3 {
-  font-family: "Georgia", "Times New Roman", serif;
-  font-weight: normal;
+#coursewrapper ul {
+  width: 200px;
+  padding-top: 40px;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  list-style-type: none;
+}
+#coursewrapper ul li {
+  margin-bottom: 8px;
+  border: 1px solid #3E606F;
+  border-radius: 3px;
+  text-align: left;
+  background-color: #3E606F;
+  color: #fcfff5;
+  cursor: pointer;
+}
+#coursewrapper ul li:hover {
+  opacity: 0.5;
+}
+#coursewrapper ul li h4, #wrapper ul li h6 {
+  padding-left: 10px;
+}
+#coursewrapper ul li h4 {
+  padding-top: 10px;
+  margin: 0;
+}
+#coursewrapper ul li h6 {
+  margin-top: 4px;
+  margin-bottom: 10px;
 }
 
-h1 {
-  font-size: 46px;
-}
 
-h2 {
-  font-size: 35px;
+@media(min-width: 1024px) {
+  #coursewrapper ul {
+    width: 450px;
+    padding-top: 80px;
+  }
+  #coursewrapper ul li h4 {
+    padding-top: 15px;
+    font-size: 22px;
+  }
+  #coursewrapper ul li h6 {
+    padding-bottom: 15px;
+    font-size: 15px;
+  }
 }
-
-h3 {
-  font-size: 28px;
-}
-
-h4 {
-  font-size: 21px;
-}
-
-li {
-  list-style: none;
-}
-
-#login-buttons {
-  float: right;
-  color: #FCFFF5;
-}
-
-.customFeedback {
-  font-size: 35px;
+  #coursewrapper #courseprompt {
   text-align: center;
-  width: 100%;
-  min-height: 75px;
-  border: 2px solid #888;
-  padding-top: auto;
-  padding-bottom: auto;
-}
-
-#chooseLectureList {
-  background-color: #fff;
-}
-
-.logo, .logo a, .logo a:hover, .logo a:focus {
-  font-family: "Georgia", "Times New Roman", serif;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: Nevis;
   font-size: 50px;
-  width: 100%;
-  color: #FCFFEF;
+  color: #fcfff5;
+
 }
 
-.sidebar {
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-left: -15px;
+/* Global */
+
+
+
+
+html, body {
+  font-family: Helvetica, Arial;
   background-color: #193441;
-  padding-left: 15px;
 }
 
 
-.mainContent {
-  height: 100%;
+#header ul {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: 32px;
+  vertical-align: middle;
+  list-style-type: none;
+  text-align: center;
+  color: #91AA9D;
+}
+#header ul li {
+  display: inline-block;
+}
+#header ul li:nth-child(1) {
+  float: left;
+}
+#header ul li:nth-child(3) {
+  float: right;
+}
+#header ul li a:link { color: black;}
+#header ul li a:visited { color: black;}
+#header ul li a:hover {color: black;}
+#header ul li a:active {color: black;}
+#header ul li i {
+  color: #91AA9D;
+}
+#header ul li p {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+#header ul li a img {
+  max-width: 32px;
 }
 
-.panel-default {
-  font-size: 36px;
+
+@media(min-width: 1024px) {
+  #header ul li:nth-child(1) {
+    margin-left: 25px;
+  }
+  #header ul li:nth-child(3) {
+    margin-right: 25px;
+  }
+  #header ul li p {
+    margin-top: 13px;
+    font-size: 30px;
+  }
+  #header ul li a img {
+    max-width: 60px;
+  }
+}
+
+/* Hub */
+
+#hubmobile-wrapper #hubmobilepresets {
+  padding-top: 30px;
+  text-align: center;
+}
+#hubmobile-wrapper #hubmobilepresets #hubcanvas {
+  width: 222px !important;
+  height: 222px !important;
+}
+#hubmobile-wrapper #hubmobileask {
+  cursor: pointer;
+}
+#hubmobile-wrapper #hubmobileask h2 {
+  width: 180px;
+  padding: 8px 20px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid #D1DBBD;
+  border-radius: 3px;
+  background-color: #D1DBBD;
+  color: #3E606F;
+}
+#hubdesktop-wrapper {
+  display: none;
+}
+
+
+@media(min-width: 1024px) {
+  #hubmobile-wrapper {
+    display: none;
+  }
+  #hubdesktop-wrapper {
+    display: block;
+  }
+  #hubdesktop-wrapper #hubdesktoppresets {
+    float:left;
+    padding-top: 50px;
+  }
+  #hubdesktop-wrapper #hubdesktoppresets #hubcanvas2 {
+    width: 130px;
+    height: 565px;
+  }
+  #hubdesktop-wrapper #hubdesktopask {
+    float: right;
+    width: calc(100% - 410px);
+    margin-top: 50px;
+    margin-right: 40px;
+  }
+  #hubdesktop-wrapper #hubdesktopask #hubdesktopscreen {
+    padding: 10px;
+    border-radius: 3px;
+  }
+  #hubdesktop-wrapper #hubdesktopask #hubdesktopscreen h3 {
+    color: #FCFFF5;
+  }
+  #hubdesktop-wrapper #hubdesktopask #hubdesktopscreen #hubdesktoptypefield {
+    float: right;
+    width: 100%;
+    margin-top: 20px;
+  }
+  #hubdesktop-wrapper #hubdesktopask #hubdesktopscreen #hubdesktoptypefield #hubdesktopfield {
+    width: calc(100% - 10px);
+    height: 48px;
+    padding-left: 7px;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: #fcfff5;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+  }
+  #hubdesktop-wrapper #hubdesktopask #hubdesktopscreen #hubdesktoptypefield #hubdesktopsend {
+    font-size: 16px;
+    line-height: 22px;
+    background-color: #91AA9D;
+    border: 1px solid #91AA9D;
+    border-radius: 3px;
+    color: #fcfff5;
+  }
+  #hubdesktop-wrapper #hubdesktopask #hubdesktopscreen #hubdesktopmessages {
+    height: 490px;
+  }
+  #hubdesktop-wrapper #hubdesktopask #hubdesktopscreen #hubdesktopmessages p {
+    float: right;
+    padding: 5px;
+    margin-bottom: 17px;
+    background-color: #D1DBBD;
+    border: 1px solid #D1DBBD;
+    border-radius: 5px;
+    color: #193441;
+    line-height: 16px;
+    font-size: 14px;
+    clear: right;
+  }
+}
+
+/* Login */
+
+#loginbranding {
+  text-align: center;
+}
+#loginbranding img {
+  margin-left: 40px;
+  max-width: 150px;
+}
+#loginbranding h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: Nevis;
+  font-size: 70px;
+  color: #fcfff5;
+}
+
+#logincredentials {
+  width: 200px;
+  padding-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+#logincredentials input {
+  width: 196px;
+  margin-bottom: 8px;
+  background-color: #fcfff5;
+  border: 1px solid #dedede;
+  border-radius: 3px;
+  font-size: 15px;
+  color: #777;
+}
+#logincredentials input:nth-child(1),
+#logincredentials input:nth-child(2) {
+  padding: 3px 0 3px 7px;
+}
+#logincredentials input#loginsubmit {
+  margin-left: auto;
+  margin-right: auto;
+  width: 205px;
+  height: 30px;
+  border: 1px solid #037f67;
+  color: #ffffff;
+  background-color: #037F67; /*024f40*/
+  cursor: pointer;
+}
+
+
+@media(min-width: 1024px) {
+  #loginbranding img {
+    margin-top: 80px;
+    margin-bottom: -20px;
+    margin-left: 0;
+    max-width: 250px;
+  }
+  #loginbranding h1 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 120px;
+  }
+  #logincredentials {
+    width: 280px;
+    padding-top: 0;
+  }
+  #logincredentials input {
+    width: 276px;
+    font-size: 18px;
+  }
+  #logincredentials input:nth-child(3) {
+    width: 285px;
+  }
 
 }
 
-#tooFastCount, #tooSlowCount, #goBackCount, #dontUnderstandCount {
-  width: 100px;
-  height: 100px;
-  margin: 10px 10px 10px 10px;
-  background-color: #91AA9D;
-  color: #000;
+#loginbrandingname {
+    text-align: center;
+    clear: both;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+#loginbrandingaside {
+    text-align: center;
+    font-style: italic;
+    color: #fff;
 }

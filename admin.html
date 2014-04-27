@@ -1,43 +1,55 @@
-<template name="adminLectureSidebar">
-  {{> feedbackCounts }}
+<template name="adminTemplate">
+  <div id="adminproductname">Census</div>
+  <div class="adminsidepanel">
+    {{> feedbackCounts }}
+  </div>
+  <div id="adminlivefeed">
+    {{#each messages}}
+    {{#if presetType}}
+    <!-- display nothing for preset responses -->
+    {{else}}
+    <div class="adminSide customFeedback">{{content}}</div>
+    {{/if}}
+    {{/each}}
+  </div>
 </template>
 
-  <template name="feedbackCounts">
-    <div id="tooFastCount">
-      {{#each tooFast}}
-        {{> updateTooFast}}
-      {{/each}}
-      {{tooFastCount}}
-    </div>
-    <div id="tooSlowCount">
-      {{#each tooSlow}}
-        {{> updateTooSlow}}
-      {{/each}}
-      {{tooSlowCount}}
-    </div>
-    <div id="goBackCount">
-      {{#each goBack}}
-        {{> updateGoBack}}
-      {{/each}}
-      {{goBackCount}}
-    </div>
-    <div id="dontUnderstandCount">
-      {{#each dontUnderstand}}
-        {{> updateDontUnderstand}}
-      {{/each}}
-      {{dontUnderstandCount}}
-    </div>
-  </template>
+<template name="feedbackCounts">
+  <div id="tooFastCount" class="span4">
+    {{#each tooFast}}
+    {{> updateTooFast}}
+    {{/each}}
+    Too fast
+  </div>
+  <div id="tooSlowCount" class="span4">
+    {{#each tooSlow}}
+    {{> updateTooSlow}}
+    {{/each}}
+    Too slow
+  </div>
+  <div id="goBackCount" class="span4">
+    {{#each goBack}}
+    {{> updateGoBack}}
+    {{/each}}
+    Go back
+  </div>
+  <div id="dontUnderstandCount" class="span4">
+    {{#each dontUnderstand}}
+    {{> updateDontUnderstand}}
+    {{/each}}
+    I don't understand
+  </div>
+</template>
 
-  <template name="updateTooFast">
+<template name="updateTooFast">
 
-  </template>
-  <template name="updateTooSlow">
-  </template>
-  <template name="updateGoBack">
-  </template>
-  <template name="updateDontUnderstand">
-  </template>
+</template>
+<template name="updateTooSlow">
+</template>
+<template name="updateGoBack">
+</template>
+<template name="updateDontUnderstand">
+</template>
 
 <!-- adminLectureDetail for professors view -->
 <template name="adminLectureDetail">

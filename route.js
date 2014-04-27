@@ -7,12 +7,12 @@ Router.configure({
 if (Meteor.isClient) {  
 Router.map(function() {
 
+    this.route('login', {
+      path: '/'
+    })
+
     this.route('listLectures', {
-      path: '/',
-      template: 'promptChooseLecture',
-      yieldTemplates: {
-        'listLectures': {to: 'sidebar'}
-      },
+      path: '/courses',
       data: function(){
         templateData = { 
           lectures: Lectures.find()
@@ -21,11 +21,8 @@ Router.map(function() {
       }
     });
 
-    this.route('adminLectureDetail', {
+    this.route('adminTemplate', {
       path: '/:index/admin',
-      yieldTemplates: {
-        'adminLectureSidebar': {to: 'sidebar'}
-      },
       action: function() {
         var currentLectureId = parseInt(this.params.index);
         var currentLecture = Lectures.findOne({index: currentLectureId});
@@ -52,21 +49,18 @@ Router.map(function() {
           tooSlow: Messages.find({lecture: currentLectureId, presetType: "tooSlow"}),
           goBack: Messages.find({lecture: currentLectureId, presetType: "backSlide"}),
           dontUnderstand: Messages.find({lecture: currentLectureId, presetType: "dontUnderstand"}),
-          tooFastCount: Messages.find({lecture: currentLectureId, presetType: "tooFast"}).count(),
-          tooSlowCount: Messages.find({lecture: currentLectureId, presetType: "tooSlow"}).count(),
-          goBackCount: Messages.find({lecture: currentLectureId, presetType: "backSlide"}).count(),
-          dontUnderstandCount: Messages.find({lecture: currentLectureId, presetType: "dontUnderstand"}).count()
+          tooFastCount: Meteor.call('countMessagesByPresetType', currentLectureId, "tooFast"),
+          tooSlowCount: Meteor.call('countMessagesByPresetType', currentLectureId, "tooSlow"),
+          goBackCount: Meteor.call('countMessagesByPresetType', currentLectureId, "backSlide"),
+          dontUnderstandCount: Meteor.call('countMessagesByPresetType', currentLectureId, "dontUnderstand")
         };
         return templateData;
       }
     });
 
-    this.route('studentLectureDetail', {
+    this.route('studentPresetTemplate', {
 
       path: '/:index',
-      yieldTemplates: {
-        'studentLectureSidebar': {to: 'sidebar'}
-      },
       action: function() {
         var currentLectureId = parseInt(this.params.index);
         var currentLecture = Lectures.findOne({index: currentLectureId});
@@ -90,8 +84,39 @@ Router.map(function() {
           messages: Messages.find({lecture: currentLectureId})
         };
         return templateData;
-      },
+      }
 
+    });
+
+    this.route('studentAskTemplate', {
+      path: '/:index/ask',
+      action: function() {
+        var currentLectureId = parseInt(this.params.index);
+        var currentLecture = Lectures.findOne({index: currentLectureId});
+        if (Meteor.Device.isPhone() == false) {
+          Router.go('/'+currentLectureId);
+        }
+        else if (!currentLecture) {
+          this.redirect('/');
+        }
+        else {
+          this.render();
+        }
+      },
+      waitOn: function() {
+        var currentLectureId = parseInt(this.params.index);
+        return Meteor.subscribe('messages', currentLectureId);
+      },
+      data: function(){
+        var currentLectureId = parseInt(this.params.index);
+        Session.set('currentLectureId', currentLectureId);
+        templateData = { 
+          lectures: Lectures.find(),
+          lecture: Lectures.findOne({index: currentLectureId}),
+          messages: Messages.find({lecture: currentLectureId})
+        };
+        return templateData;
+      }
     });
 
     this.route('notFound', {

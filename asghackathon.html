@@ -8,14 +8,25 @@
 
 <!-- listLectures template to list all lectures -->
 <template name="listLectures">
-  <select id="chooseLectureList" class="btn btn-default">
+  <div id="coursewrapper">
+   <div id="courseprompt"><h1>Select a class</h1></div>
+  <ul>
     {{#each lectures}}
-    {{> listLecturesItem}}
+    <a href="{{pathFor 'studentPresetTemplate'}}">{{> listLecturesItem}}</a>
     {{/each}}
-  </select>
-  <input type="button" id="chooseLecture" value="Go!">
+  </ul>
+</div>
 </template>
 
+<template name="headerTemplate">
+<div id="header">
+  <ul>
+    <li><a>&lt;</a></li>
+    <li><p></p></li>
+    <li><a href="/"><img src="/Census-Logo.png"></a></li>
+  </ul>
+</div>
+</template>
 
 <template name="promptChooseLecture">
   <h1>Please choose a lecture on your left.</h1>
@@ -23,7 +34,20 @@
 
 <!-- listLecturesItem template to format each lecture name in listLectures -->
 <template name="listLecturesItem">
-  <option value="{{ index }}">{{name}}</option>
+  <li><h4>{{name}}</h4></li>
+</template>
+
+
+<template name="login">
+  <div id="loginbranding">
+    <div id="loginbrandingname"><h1>Census</h1></div>
+    <div id="loginbrandingaside">(note: just click login)</div>
+  </div>
+  <div id="logincredentials">
+      <input type="text" id="netid" placeholder="Net ID">
+      <input type="password" id="netidpass" placeholder="Password">
+      <center><a href="{{pathFor 'listLectures'}}"><input type="button" id="loginsubmit" value="Log in"></a></center>
+  </div>
 </template>
 
 

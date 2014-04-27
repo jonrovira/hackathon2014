@@ -1,27 +1,66 @@
-<template name="studentLectureDetail">
-  <h1>{{lecture.name}}</h1>
-    <ul>
-    {{#each messages}}
-    
-        <li>{{content}}</li>
-
-    {{/each}}
-  </ul>
+<template name="studentPresetTemplate">
+  {{#if isPhone}}
+  {{> studentMobilePresets}}
+  {{else}}
+  {{> studentDesktop}}
+  {{/if}}
 </template>
 
-<template name="studentLectureSidebar">
-  {{> listLectures}}
+<template name="studentAskTemplate">
+  {{> studentMobileAsk}}
+  </template>
 
-  {{> submitFeedback}}
+<template name="studentMobilePresets">
+  <div id="hubmobile-wrapper">
+    <div id="hubmobilepresets">
+      <input type="button" id="lectureTooFast" value="Please slow down a bit!"><br>
+      <input type="button" id="lectureTooSlow" value="You can speed up a bit"><br>
+      <input type="button" id="goBackSlide" value="Can you go back a slide?"><br>
+      <input type="button" id="dontUnderstand" value="I don't understand this."><br>
+    </div>
+    <div id="hubmobileask">
+      <h2><a href="/ + {{ pathFor 'studentAskTemplate' this.index}}">Ask a question</a></h2>
+    </div>
+  </div>
 </template>
 
-<!-- submitFeedback template for default and custom responses in studentLectureDetail -->
-<template name="submitFeedback">
-  <h3>Ask a question</h3>
-  <input type="button" id="lectureTooFast" value="Please slow down a bit!"><br>
-  <input type="button" id="lectureTooSlow" value="You can speed up a bit"><br>
-  <input type="button" id="goBackSlide" value="Can you go back a slide?"><br>
-  <input type="button" id="dontUnderstand" value="I don't understand this."><br>
-  <input type="text" id="feedbackContent"><br>
-  <input type="button" id="submitNewFeedback" value="Submit"><br>
+<template name="studentMobileAsk">
+  <div id="askwrapper">
+    <div id="askscreen">
+      <div id="askmessages">
+        {{#each messages}}
+        <p>{{content}}</p>
+        {{/each}}
+      </div>
+      <div id="asktypefield">
+        <input type="text" id="askfield" placeholder="Ask a question">
+        <input type="button" id="asksend" value="Submit">
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="studentDesktop">
+  <div id="hubdesktop-wrapper">
+    <div id="hubdesktoppresets">
+      <input type="button" id="lectureTooFast" value="Please slow down a bit!"><br>
+      <input type="button" id="lectureTooSlow" value="You can speed up a bit"><br>
+      <input type="button" id="goBackSlide" value="Can you go back a slide?"><br>
+      <input type="button" id="dontUnderstand" value="I don't understand this."><br>
+    </div>
+    <div id="hubdesktopask">
+      <div id="hubdesktopscreen">
+        <h3>Feed for {{lecture.name}}</h3>
+        <div id="hubdesktoptypefield">
+          <input type="text" id="hubdesktopfield" placeholder="Ask a question">
+          <input type="button" id="hubdesktopsend" value="Submit">
+        </div>
+        <div id="hubdesktopmessages">
+          {{#each messages}}
+          <p>{{content}}</p>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
