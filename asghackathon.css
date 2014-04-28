@@ -1,4 +1,4 @@
-/* Admin */
+/* Global */
 
 @font-face {
   font-family: Nevis;
@@ -7,6 +7,7 @@
 
 html, body {
   font-family: Helvetica, Arial;
+  background-color: #193441;
 }
 
 #header ul {
@@ -42,40 +43,57 @@ html, body {
   }
 }
 
-#adminproductname {
-  position: absolute;
-  top: 70px;
-  left: 500px;
-  border: 1px solid #eee;
-  height: 120px;
-  width: 250px;
-  text-align: center;
 
-}
+/* Admin */
 
 .adminsidepanel {
   position: absolute;
   top: 50px;
-  left: 10px;
-  height: 450px;
-  width: 300px;
+  left: 80px;
 }
-
 .span4 {
-  margin-top: 20px;
-  height: 130px;
-  border: 1px solid #999;
+  width: 145px;
+  height: 145px;
+  margin-bottom: 15px;
+  background-color: #91AA9D;
+  border: 3px solid #193441;
+  outline: none;
+  box-shadow: 0 0 0 3px #3E606F;
+  border-radius: 50%;
   text-align: center;
-
+  line-height: 145px;
+  font-size: 14px;
+  color: #FCFFF5;
 }
-
+#adminproductname {
+  position: absolute;
+  top: 70px;
+  left: 380px;
+  width: 250px;
+  font-size: 30px;
+  color: #FCFFF5;
+}
+#adminremoveall {
+  margin-top: 80px;
+  margin-left: 375px;
+  background-color: #FCFFF5;
+  border: 1px solid #FCFFF5;
+  border-radius: 3px;
+  color: #193441;
+}
+#adminremoveall:hover {
+  opacity: 0.5;
+}
 #adminlivefeed {
   position: absolute;
-  top: 222px;
-  left: 380px;
-  border: 1px solid #999;
-  width: 880px;
+  top: 160px;
+  left: 383px;
   height: 434px;
+  width: calc(100% - 410px);
+  text-align: right;
+}
+#adminlivefeed .customFeedback {
+  color: ;
 }
 
 
@@ -193,16 +211,6 @@ html, body {
 
 }
 
-/* Global */
-
-
-
-
-html, body {
-  font-family: Helvetica, Arial;
-  background-color: #193441;
-}
-
 
 #header ul {
   width: 100%;
@@ -301,6 +309,7 @@ html, body {
     margin-bottom: 15px;
     background-color: #91AA9D;
     border: 3px solid #193441;
+    outline: none;
     box-shadow: 0 0 0 3px #3E606F;
     border-radius: 50%;
     font-size: 14px;
