@@ -333,11 +333,11 @@ html, body {
   }
   #hubdesktop-wrapper #hubdesktopask #hubdesktopscreen #hubdesktoptypefield {
     float: right;
-    width: calc(100% - 10px);
+    width: 100%;
     margin-top: 20px;
   }
   #hubdesktop-wrapper #hubdesktopask #hubdesktopscreen #hubdesktoptypefield #hubdesktopfield {
-    width: calc(100% - 10px);
+    width: calc(100% - 87px);
     height: 48px;
     padding-left: 7px;
     font-size: 16px;
@@ -348,7 +348,7 @@ html, body {
   }
   #hubdesktop-wrapper #hubdesktopask #hubdesktopscreen #hubdesktoptypefield #hubdesktopsend {
     font-size: 16px;
-    line-height: 22px;
+    line-height: 45px;
     background-color: #91AA9D;
     border: 1px solid #91AA9D;
     border-radius: 3px;
