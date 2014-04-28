@@ -184,7 +184,17 @@ html, body {
   margin-top: 4px;
   margin-bottom: 10px;
 }
-
+#coursewrapper #courseprompt {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: Nevis;
+  font-size: 50px;
+  color: #fcfff5;
+}
+#coursewrapper #courseprompt h1 {
+  font-size: 40px;
+}
 
 @media(min-width: 1024px) {
   #coursewrapper ul {
@@ -199,15 +209,6 @@ html, body {
     padding-bottom: 15px;
     font-size: 15px;
   }
-}
-  #coursewrapper #courseprompt {
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-family: Nevis;
-  font-size: 50px;
-  color: #fcfff5;
-
 }
 
 
