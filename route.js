@@ -15,7 +15,8 @@ Router.map(function() {
       path: '/courses',
       data: function(){
         templateData = { 
-          lectures: Lectures.find()
+          lectures: Lectures.find(),
+          previousPage: '/';
         };
         return templateData;
       }
@@ -26,7 +27,6 @@ Router.map(function() {
       action: function() {
         var currentLectureId = parseInt(this.params.index);
         var currentLecture = Lectures.findOne({index: currentLectureId});
-
         if (Meteor.userId() == null || Meteor.userId() != currentLecture.admin) {
           this.redirect('/');
         }
@@ -43,6 +43,7 @@ Router.map(function() {
         var currentLectureId = parseInt(this.params.index);
         Session.set('currentLectureId', currentLectureId);
         templateData = {
+          previousPage: "{{ pathFor listLectures }}",
           lecture: Lectures.findOne({index: currentLectureId}),
           messages: Messages.find({lecture: currentLectureId}),
           tooFast: Messages.find({lecture: currentLectureId, presetType: "tooFast"}),
@@ -79,6 +80,7 @@ Router.map(function() {
         var currentLectureId = parseInt(this.params.index);
         Session.set('currentLectureId', currentLectureId);
         templateData = { 
+          previousPage: "{{ pathFor listLectures }}",
           lectures: Lectures.find(),
           lecture: Lectures.findOne({index: currentLectureId}),
           messages: Messages.find({lecture: currentLectureId})
@@ -109,8 +111,10 @@ Router.map(function() {
       },
       data: function(){
         var currentLectureId = parseInt(this.params.index);
+        var currentLecture = Lectures.findOne({index: currentLectureId});
         Session.set('currentLectureId', currentLectureId);
         templateData = { 
+          previousPage: "{{ pathFor studentPresetTemplate currentLecture}}",
           lectures: Lectures.find(),
           lecture: Lectures.findOne({index: currentLectureId}),
           messages: Messages.find({lecture: currentLectureId})

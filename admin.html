@@ -3,7 +3,9 @@
   <div class="adminsidepanel">
     {{> feedbackCounts }}
   </div>
+  <input type="button" id="adminremoveall" value="Clear all">
   <div id="adminlivefeed">
+
     {{#each messages}}
     {{#if presetType}}
     <!-- display nothing for preset responses -->

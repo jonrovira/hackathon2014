@@ -71,6 +71,13 @@ if (Meteor.isClient) {
   
     }
   });
+
+  Template.adminTemplate.events({
+    'click #adminremoveall': function() {
+      var currentLectureId = Session.get('currentLectureId');
+      Meteor.call('clearAll', currentLectureId);
+    }
+  });
   
   Template.updateTooFast.rendered = function() {
     $('#tooFastCount').fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
