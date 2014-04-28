@@ -379,6 +379,7 @@ html, body {
   text-align: center;
 }
 #loginbranding img {
+  margin-left: 45px;
   max-width: 150px;
 }
 #loginbranding h1 {
