@@ -10,6 +10,12 @@
 
 <!-- listLectures template to list all lectures -->
 <template name="listLectures">
+  <div id="header">
+  <ul>
+    <li><a><i class="fa fa-arrow-circle-o-left fa-2x"></i></a></li>
+    <li><a href= "/"><img src="/Census-Logo.png"></a></li>
+  </ul>
+</div>
   <div id="coursewrapper">
    <div id="courseprompt"><h1>Select a class</h1></div>
   <ul>
@@ -20,14 +26,14 @@
 </div>
 </template>
 
-<template name="headerTemplate">
+<!--<template name="headerTemplate">
 <div id="header">
   <ul>
     <li><a><i class="fa fa-arrow-circle-o-left fa-2x"></i></a></li>
-    <li><a href="/"><img src="/Census-Logo.png"></a></li>
+    <li><a href= "{{ previousPage }}"><img src="/Census-Logo.png"></a></li>
   </ul>
 </div>
-</template>
+</template>-->
 
 <template name="promptChooseLecture">
   <h1>Please choose a lecture on your left.</h1>
@@ -40,6 +46,7 @@
 
 
 <template name="login">
+  {{> headerTemplate}}
   <div id="loginbranding">
     <div id="loginbrandingname"><h1>Census</h1></div>
     <div id="loginbrandingaside">(note: just click login)</div>
