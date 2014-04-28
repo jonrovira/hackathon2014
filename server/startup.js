@@ -69,7 +69,36 @@ if (Meteor.isServer) {
         lecture: lectureId,
         presetType: presetType,
         timestamp: Date.now()});
-    }
+      }
+    },
+    createMessageByButton: function(buttonId, lectureId) {
+      if (buttonId == "lectureTooFast") {
+        Messages.insert({ content: "You're going too fast", 
+          lecture: lectureId, 
+          presetType: "tooFast",
+          timestamp: Date.now() });
+      }
+      else if (buttonId == "lectureTooSlow") {
+        Messages.insert({ content: "You're going too slow", 
+          lecture: lectureId, 
+          presetType: "tooSlow",
+          timestamp: Date.now() });
+      }
+      else if (buttonId == "goBackSlide") {
+        Messages.insert({ content: "Can you go back a slide?", 
+          lecture: lectureId, 
+          presetType: "backSlide",
+          timestamp: Date.now() });
+      }
+      else if (buttonId == "dontUnderstand") {
+        Messages.insert({ content: "I don't understand", 
+          lecture: lectureId, 
+          presetType: "dontUnderstand",
+          timestamp: Date.now() });
+      }
+      else {
+        console.log("something");
+      }
     },
     countMessagesByPresetType: function(lectureId, presetType) {
       Messages.find({lecture: lectureId, presetType: presetType}).count();
