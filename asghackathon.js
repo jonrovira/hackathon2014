@@ -88,6 +88,20 @@ if (Meteor.isClient) {
     $('#dontUnderstandCount').fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
   };
 
+  $(window).resize(function(){
+    console.log('resize called');
+    var width = $(window).width();
+    if(width >= 1024) {
+      $('#header ul li a i').removeClass('fa-2x').addClass('fa-3x');
+    }
+    else{
+      $('#header ul li a i').removeClass('fa-3x').addClass('fa-2x');
+    }
+  })
+  .resize();
+
+
+
 }
 
 if (Meteor.isServer) {

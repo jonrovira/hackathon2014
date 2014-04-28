@@ -20,17 +20,26 @@ html, body {
   margin-top: 7px;
   display: inline-block;
 }
-#header i {
+#header li:nth-child(1) {
   float: left;
 }
-#header p:nth-child(2) {
-  margin-left: 105px;
-}
-#header p:nth-child(3) {
+#header li:nth-child(2) {
   float: right;
 }
-#header hr {
-  border: 1px solid #eee;
+#header li:nth-child(1) i {
+  max-width: 32px;
+}
+#header li:nth-child(2) a img {
+  max-width: 32px;
+}
+
+@media(min-width: 1024px) {
+  #header li:nth-child(1) a img {
+    max-width: 41px;
+  }
+  #header li:nth-child(2) a img {
+    max-width: 41px;
+  }
 }
 
 #adminproductname {
@@ -410,7 +419,7 @@ html, body {
     width: 276px;
     font-size: 18px;
   }
-  #logincredentials input:nth-child(3) {
+  #logincredentials input#loginsubmit {
     width: 285px;
   }
 
