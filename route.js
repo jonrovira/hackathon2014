@@ -45,7 +45,7 @@ Router.map(function() {
         templateData = {
           previousPage: "{{ pathFor listLectures }}",
           lecture: Lectures.findOne({index: currentLectureId}),
-          messages: Messages.find({lecture: currentLectureId}),
+          messages: Messages.find({lecture: currentLectureId}, {sort: { timestamp: -1 }}),
           tooFast: Messages.find({lecture: currentLectureId, presetType: "tooFast"}),
           tooSlow: Messages.find({lecture: currentLectureId, presetType: "tooSlow"}),
           goBack: Messages.find({lecture: currentLectureId, presetType: "backSlide"}),
@@ -83,7 +83,7 @@ Router.map(function() {
           previousPage: "{{ pathFor listLectures }}",
           lectures: Lectures.find(),
           lecture: Lectures.findOne({index: currentLectureId}),
-          messages: Messages.find({lecture: currentLectureId})
+          messages: Messages.find({lecture: currentLectureId}, { sort: { timestamp: -1 }})
         };
         return templateData;
       }
@@ -117,7 +117,7 @@ Router.map(function() {
           previousPage: "{{ pathFor studentPresetTemplate currentLecture}}",
           lectures: Lectures.find(),
           lecture: Lectures.findOne({index: currentLectureId}),
-          messages: Messages.find({lecture: currentLectureId})
+          messages: Messages.find({lecture: currentLectureId}, {sort: { timestamp: -1 }})
         };
         return templateData;
       }

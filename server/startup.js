@@ -64,7 +64,12 @@ if (Meteor.isServer) {
 
   Meteor.methods({
     createMessage: function(content, lectureId, presetType) {
-      Messages.insert({content: content, lecture: lectureId, presetType: presetType});
+      if (content != '') {
+      Messages.insert({content: content,
+        lecture: lectureId,
+        presetType: presetType,
+        timestamp: Date.now()});
+    }
     },
     countMessagesByPresetType: function(lectureId, presetType) {
       Messages.find({lecture: lectureId, presetType: presetType}).count();
