@@ -15,7 +15,7 @@
 <template name="studentAskTemplate">
   <div id="header">
     <ul>
-      <li><a href= "{{ pathFor 'studentPresetTemplate' lecture }}"><i class="fa fa-arrow-circle-o-left fa-2x"></i></a></li>
+      <li><a href= "{{ pathFor 'studentPresetTemplate' index=lecture.index }}"><i class="fa fa-arrow-circle-o-left fa-2x"></i></a></li>
       <li><a href= "/"><img src="/Census-Logo.png"></a></li>
     </ul>
   </div>
@@ -31,7 +31,7 @@
       <input type="button" id="dontUnderstand" value="I don't understand this."><br>
     </div>
     <div id="hubmobileask">
-      <h2><a href="/ + {{ pathFor 'studentAskTemplate' this.index}}">Ask a question</a></h2>
+      <h2><a href="{{ pathFor 'studentAskTemplate' index=lecture.index}}">Ask a question</a></h2>
     </div>
   </div>
 </template>
