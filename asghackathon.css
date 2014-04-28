@@ -377,7 +377,6 @@ html, body {
   text-align: center;
 }
 #loginbranding img {
-  margin-left: 40px;
   max-width: 150px;
 }
 #loginbranding h1 {
@@ -423,7 +422,7 @@ html, body {
   #loginbranding img {
     margin-top: 80px;
     margin-bottom: -20px;
-    margin-left: 0;
+    margin-left: 50px;
     max-width: 250px;
   }
   #loginbranding h1 {
