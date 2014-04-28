@@ -185,7 +185,17 @@ html, body {
   margin-top: 4px;
   margin-bottom: 10px;
 }
-
+#coursewrapper #courseprompt {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: Nevis;
+  font-size: 50px;
+  color: #fcfff5;
+}
+#coursewrapper #courseprompt h1 {
+  font-size: 40px;
+}
 
 @media(min-width: 1024px) {
   #coursewrapper ul {
@@ -200,15 +210,6 @@ html, body {
     padding-bottom: 15px;
     font-size: 15px;
   }
-}
-  #coursewrapper #courseprompt {
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-family: Nevis;
-  font-size: 50px;
-  color: #fcfff5;
-
 }
 
 
@@ -338,7 +339,7 @@ html, body {
     margin-top: 20px;
   }
   #hubdesktop-wrapper #hubdesktopask #hubdesktopscreen #hubdesktoptypefield #hubdesktopfield {
-    width: calc(100% - 10px);
+    width: calc(100% - 87px);
     height: 48px;
     padding-left: 7px;
     font-size: 16px;
@@ -349,7 +350,7 @@ html, body {
   }
   #hubdesktop-wrapper #hubdesktopask #hubdesktopscreen #hubdesktoptypefield #hubdesktopsend {
     font-size: 16px;
-    line-height: 22px;
+    line-height: 45px;
     background-color: #91AA9D;
     border: 1px solid #91AA9D;
     border-radius: 3px;
@@ -378,7 +379,6 @@ html, body {
   text-align: center;
 }
 #loginbranding img {
-  margin-left: 40px;
   max-width: 150px;
 }
 #loginbranding h1 {
@@ -424,7 +424,7 @@ html, body {
   #loginbranding img {
     margin-top: 80px;
     margin-bottom: -20px;
-    margin-left: 0;
+    margin-left: 50px;
     max-width: 250px;
   }
   #loginbranding h1 {
