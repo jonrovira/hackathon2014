@@ -1,8 +1,8 @@
 <template name="studentPresetTemplate">
   <div id="header">
     <ul>
-      <li><a><i class="fa fa-arrow-circle-o-left fa-2x"></i></a></li>
-      <li><a href= "{{ pathFor 'listLectures' }}"><img src="/Census-Logo.png"></a></li>
+      <li><a href= "{{ pathFor 'listLectures' }}"><i class="fa fa-arrow-circle-o-left fa-2x"></i></a></li>
+      <li><a href="/"><img src="/Census-Logo.png"></a></li>
     </ul>
   </div>
   {{#if isPhone}}
@@ -15,8 +15,8 @@
 <template name="studentAskTemplate">
   <div id="header">
     <ul>
-      <li><a><i class="fa fa-arrow-circle-o-left fa-2x"></i></a></li>
-      <li><a href= "{{ pathFor studentPresetTemplate lecture}}"><img src="/Census-Logo.png"></a></li>
+      <li><a href= "{{ pathFor 'studentPresetTemplate' lecture }}"><i class="fa fa-arrow-circle-o-left fa-2x"></i></a></li>
+      <li><a href= "/"><img src="/Census-Logo.png"></a></li>
     </ul>
   </div>
   {{> studentMobileAsk}}

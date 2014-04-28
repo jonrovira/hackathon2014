@@ -12,7 +12,7 @@
 <template name="listLectures">
   <div id="header">
   <ul>
-    <li><a><i class="fa fa-arrow-circle-o-left fa-2x"></i></a></li>
+    <li><a href="/"><i class="fa fa-arrow-circle-o-left fa-2x"></i></a></li>
     <li><a href= "/"><img src="/Census-Logo.png"></a></li>
   </ul>
 </div>
@@ -46,7 +46,12 @@
 
 
 <template name="login">
-  {{> headerTemplate}}
+  <div id="header">
+    <ul>
+      <li></li>
+      <li><a href= "/"><img src="/Census-Logo.png"></a></li>
+    </ul>
+  </div>
   <div id="loginbranding">
     <img src="/Census-Logo.png">
     <div id="loginbrandingname"><h1>Census</h1></div>
