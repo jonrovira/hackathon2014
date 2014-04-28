@@ -291,18 +291,19 @@ html, body {
     display: block;
   }
   #hubdesktop-wrapper #hubdesktoppresets {
-    float:left;
+    float: left;
     padding-top: 50px;
+    margin-left: 90px;
   }
   #hubdesktop-wrapper #hubdesktoppresets input {
-    width: 140px;
-    height: 140px;
+    width: 145px;
+    height: 145px;
     margin-bottom: 15px;
     background-color: #91AA9D;
     border: 3px solid #193441;
     box-shadow: 0 0 0 3px #3E606F;
     border-radius: 50%;
-    font-size: 15px;
+    font-size: 14px;
     color: #FCFFF5;
   }
   #hubdesktop-wrapper #hubdesktoppresets #hubcanvas2 {
