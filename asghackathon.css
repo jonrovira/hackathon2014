@@ -93,7 +93,6 @@ html, body {
   text-align: right;
 }
 #adminlivefeed .customFeedback {
-  color: ;
 }
 
 
@@ -334,7 +333,7 @@ html, body {
   }
   #hubdesktop-wrapper #hubdesktopask #hubdesktopscreen #hubdesktoptypefield {
     float: right;
-    width: 100%;
+    width: calc(100% - 10px);
     margin-top: 20px;
   }
   #hubdesktop-wrapper #hubdesktopask #hubdesktopscreen #hubdesktoptypefield #hubdesktopfield {
