@@ -16,7 +16,7 @@ Router.map(function() {
       data: function(){
         templateData = { 
           lectures: Lectures.find(),
-          previousPage: '/';
+          previousPage: '/'
         };
         return templateData;
       }

@@ -95,17 +95,23 @@ if (Meteor.isClient) {
     $('#dontUnderstandCount').fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
   };
 
-  $(window).resize(function(){
-    console.log('resize called');
-    var width = $(window).width();
-    if(width >= 1024) {
-      $('#header ul li a i').removeClass('fa-2x').addClass('fa-3x');
-    }
-    else{
-      $('#header ul li a i').removeClass('fa-3x').addClass('fa-2x');
-    }
-  })
-  .resize();
+  /* Button functionality */
+  Template.studentDesktop.rendered = function() {
+    var buttonsClicked = [];
+    $('#hubdesktop-wrapper #hubdesktoppresets input').click(function() {
+      var clickedButton = this;
+      if(buttonsClicked.indexOf(clickedButton) < 0) {
+        buttonsClicked.push(clickedButton);
+        $(this).css('background-color', '#3E606F');
+        var buttonTimer = setInterval(function() {
+          $(clickedButton).css('background-color', '#91AA9D');
+          var index = buttonsClicked.indexOf(clickedButton);
+          buttonsClicked.splice(index, 1);
+          window.clearInterval(buttonTimer)
+        }, 3000);
+      }
+    });
+  }
 
 
 
